@@ -1,0 +1,19 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:#faf7f2;color:#2b2b2b;--c:#3a6fd8;--l:#e6eefc}
+header{position:sticky;top:0;background:#fff;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;box-shadow:0 1px 4px #0001;z-index:2}
+header span{font-weight:700;color:var(--c)}nav button{background:none;border:0;font-size:.85rem;color:#555;padding:6px}
+main{max-width:520px;margin:auto;padding:16px}h1{font-size:1.5rem}h2{font-size:1.15rem;margin:.2em 0}
+.card{background:#fff;border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 2px 8px #0000000d}
+.btn{display:block;width:100%;padding:14px;border:0;border-radius:12px;background:var(--c);color:#fff;font-size:1rem;font-weight:600;margin-top:12px}
+.btn.ghost{background:var(--l);color:var(--c)}input,textarea{width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;font:inherit;margin:6px 0}
+textarea{min-height:70px}.counter{font-size:2.4rem;font-weight:800;color:var(--c)}
+.bar{height:10px;background:#eee;border-radius:5px;overflow:hidden}.bar i{display:block;height:100%;background:var(--c)}
+.chap{border-left:6px solid;padding-left:12px}.dots{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.dot{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:.7rem;border:2px solid;background:#fff;cursor:pointer}
+.dot.done{color:#fff}.dot.lock{opacity:.3;cursor:default}.dot.cur{box-shadow:0 0 0 3px #ffd65a}
+.lvl{font-size:.8rem;color:#777;margin-top:8px}.chip{display:inline-block;padding:3px 9px;border-radius:20px;font-size:.75rem;background:var(--l);color:var(--c);margin:2px}
+.quote{font-style:italic;background:var(--l);border-radius:12px;padding:12px}
+label.chk{display:flex;gap:10px;align-items:flex-start;padding:8px 0}label.chk input{width:22px;height:22px;margin:0;flex:none}
+.moods{display:flex;gap:8px}.moods button{flex:1;font-size:1.7rem;padding:8px;border-radius:12px;border:2px solid #eee;background:#fff}
+.moods button.on{border-color:var(--c);background:var(--l)}.ph{font-size:.7rem;color:#b06;background:#fde;padding:2px 6px;border-radius:6px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.cal div{aspect-ratio:1;border-radius:8px;display:grid;place-items:center;font-size:.75rem;background:#eee}
+.small{font-size:.85rem;color:#666}.diplome{text-align:center;border:4px double var(--c);padding:28px}
