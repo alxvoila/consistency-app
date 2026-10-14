@@ -56,3 +56,8 @@ input[type=range]::-moz-range-thumb{width:42px;height:42px;border-radius:50%;bac
 .diploma{text-align:center;border:1px solid var(--fg);padding:44px 22px;margin:24px 0}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{header,.foot,.x{display:none!important}}
+/* v4 header: title row + nav row, clearly separated */
+header{flex-direction:column;align-items:stretch;gap:10px;padding-bottom:0;border-bottom:1px solid var(--line)}
+header .brand{font:900 20px var(--serif);letter-spacing:-.01em;text-transform:none}
+header nav{gap:22px;padding:8px 0 10px;border-top:1px solid var(--line)}
+.page{padding-top:calc(env(safe-area-inset-top) + 100px)}
