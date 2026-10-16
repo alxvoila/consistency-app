@@ -68,3 +68,11 @@ header nav{gap:22px;padding:8px 0 10px;border-top:1px solid var(--line)}
 .prow .serif{font-size:24px;white-space:nowrap}.pd{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}.pd i{width:9px;height:9px;border-radius:50%;animation:rv .4s both}
 .steps{display:flex;flex-direction:column;gap:2px}.steps div{display:flex;flex-direction:column;gap:4px;padding:12px 0;border-bottom:1px solid var(--line)}.steps .serif{font-size:21px}
 .intro-face svg{width:84px!important;margin:6px auto 0}
+/* i18n */
+:root{--serif:'Playfair Display',Georgia,'Times New Roman','Noto Serif SC','Songti SC','STSong',serif;--sans:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'PingFang SC','Noto Sans SC','Hiragino Sans GB','Microsoft YaHei',sans-serif}
+.huge,.big{overflow-wrap:normal}
+.cjk i,.cjk em,.cjk .quote{font-style:normal}.cjk .huge,.cjk .big{letter-spacing:0;line-height:1.1;overflow-wrap:anywhere}.cjk .huge{font-size:clamp(64px,21vw,120px)}.cjk .sc{letter-spacing:.12em}
+.langs{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 6px}.langs button{background:transparent;color:var(--mut);border:1px solid var(--line);border-radius:30px;padding:7px 12px;font:500 12px var(--sans)}
+.langs button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.cjk .q{line-height:1.4}
+.cjk header .brand{letter-spacing:-.01em}
