@@ -38,13 +38,13 @@ function wireSliders(root){root.querySelectorAll('.slider input').forEach(r=>{co
 
 // ---------- Stepper ----------
 // step: {t:'w'|'b', h:()=>html, save?(sec), valid?(sec)->msg, foot?:'yn'|'none', cta?, onYes/onNo}
-function stepper(steps,{start=+(new URLSearchParams(location.search).get('step')||0),onExit=()=>go('home')}={}){let i=start;document.body.classList.add('stepping');
+function stepper(steps,{start=+(new URLSearchParams(location.search).get('step')||0),onExit=()=>go('home'),exitLabel=''}={}){let i=start;document.body.classList.add('stepping');
  function show(dir){const st=steps[i];setTheme(st.t);
   const dots=steps.length>1?`<div class="dots">${steps.map((_,k)=>`<i class="${k===i?'on':k<i?'past':''}"></i>`).join('')}</div>`:'<span></span>';
   const back=i>0?`<button class="btn ghost back" data-a="back" aria-label="Back">←</button>`:'';
   const foot=st.foot==='none'?'':st.foot==='yn'?`<div class="foot">${back}<button class="btn no" data-a="no">Skipped</button><button class="btn ok" data-a="yes">Done ✓</button></div>`
    :`<div class="foot">${back}<button class="btn ${st.ok?'ok':''}" data-a="next">${st.cta||'Next →'}</button></div>`;
-  app.innerHTML=`<section class="s ${st.t} in-${dir}"><div class="top">${dots}<button class="x" data-a="exit" aria-label="Close">✕</button></div><div class="body">${st.h()}</div>${foot}</section>`;
+  app.innerHTML=`<section class="s ${st.t} in-${dir}"><div class="top">${dots}${exitLabel?`<button class="x sc" data-a="exit" style="font-size:11px">${exitLabel}</button>`:`<button class="x" data-a="exit" aria-label="Close">✕</button>`}</div><div class="body">${st.h()}</div>${foot}</section>`;
   const sec=app.firstElementChild;wireSliders(sec);window.scrollTo(0,0);
   sec.addEventListener('click',e=>{const a=e.target.closest('[data-a]')?.dataset.a;if(!a)return;
    if(a==='exit'){st.save?.(sec);onExit()}else if(a==='back')prev();else if(a==='next')next();
@@ -64,6 +64,8 @@ const val=(sec,sel)=>sec.querySelector(sel)?.value??'';
 // ---------- Router ----------
 function render(){document.body.classList.remove('stepping');
  const top=document.getElementById('top');
+ const hv=location.hash.slice(1).split('/')[0];
+ if(hv==='intro'||(!S.profile&&!S.introSeen)){top.style.display='none';return introView()}
  if(!S.profile){top.style.display='none';return onboarding()}
  top.style.display='';const [v,a]=location.hash.slice(1).split('/');
  top.querySelectorAll('[data-go]').forEach(b=>b.classList.toggle('on',b.dataset.go===(v||'home')||(!v&&b.dataset.go==='home')));
@@ -71,6 +73,34 @@ function render(){document.body.classList.remove('stepping');
 }
 document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go));
 window.onhashchange=render;
+
+
+// ---------- Intro: what is Consistency? ----------
+const reveal=t=>t.split(' ').map((w,i)=>`<span class="rv" style="animation-delay:${i*.12}s">${esc(w)}</span>`).join(' ');
+const noMotion=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
+let introTimer=null;
+function introView(){clearInterval(introTimer);
+ const done=()=>{clearInterval(introTimer);S.introSeen=true;save();if(S.profile)go('settings');else{location.hash='';render()}};
+ const path=[['7','days','#3a6fd8',7],['14','days','#2f9e6a',14],['1','month','#e07b2a',27],['90','days','#7d4fc4',0]];
+ stepper([
+  {t:'w',h:()=>`<p class="sc rv">A 90-day notebook</p><h1 class="huge">${reveal('Come back.')}</h1><p class="sc rv" style="animation-delay:.4s">Not more. Just back.</p>
+   <p class="lead rv" style="animation-delay:.6s">Consistency helps you build a steady rhythm, a few minutes a day. It doesn't ask you to be perfect — only to return, one day after another.</p>`},
+  {t:'b',h:()=>`<p class="sc">The path · it grows as you do</p><h1 class="huge"><span id="cnt">0</span><span class="serif" style="font-size:.3em;font-weight:400;letter-spacing:0"> days</span></h1>
+   <div class="path" style="margin-top:18px">${path.map((r,i)=>`<div class="prow rv" style="animation-delay:${.25+i*.25}s"><span class="serif"><b>${r[0]}</b> ${r[1]}</span><span class="pd">${Array.from({length:Math.min(r[3]||1,14)},(_,k)=>`<i style="background:${r[2]};animation-delay:${.4+i*.25+k*.03}s"></i>`).join('')}</span></div>`).join('')}</div>
+   <p class="small">7 days, then 14, then a month — each in levels that grow, from Basic to Intense. Then a pause to look back at your 90 days.</p>`,
+   on:sec=>{const c=sec.querySelector('#cnt');if(noMotion()){c.textContent=90;return}let v=0;introTimer=setInterval(()=>{v=Math.min(90,v+3);c.textContent=v;if(v>=90)clearInterval(introTimer)},28)}},
+  {t:'w',h:()=>`<p class="sc">How a day works</p><h1 class="big">${reveal('One page.')}</h1>
+   <div class="steps"><div class="rv" style="animation-delay:.3s"><span class="sc muted">Morning</span><span class="serif">How's your energy?</span></div>
+   <div class="rv" style="animation-delay:.5s"><span class="sc muted">Three tiny actions</span><span class="serif">Get up · drink water · one small task</span></div>
+   <div class="rv" style="animation-delay:.7s"><span class="sc muted">One line</span><span class="serif">Write it if you feel like it</span></div>
+   <div class="rv" style="animation-delay:.9s"><span class="sc muted">Tonight</span><span class="serif">Slide to say how it felt</span></div></div>
+   <div class="face rv intro-face" style="animation-delay:1.1s">${faceSvg(50)}</div>`,
+   on:sec=>{if(noMotion())return;const p=sec.querySelector('.fm');let t=0;introTimer=setInterval(()=>{t+=.05;p.setAttribute('d',mouth(50+48*Math.sin(t)))},40)}},
+  {t:'b',h:()=>`<p class="sc">The one rule</p><h1 class="big">${reveal('A missed day erases nothing.')}</h1><p class="lead rv" style="animation-delay:.8s">Just turn the page and pick it back up. Your days stay counted. Three jokers protect your thread when life gets in the way.</p>`},
+  {t:'w',h:()=>`<p class="sc">Start any day of the year</p><h1 class="huge">${reveal('Today.')}</h1><p class="sc rv" style="animation-delay:.3s">Your day 1 is today</p><p class="lead rv" style="animation-delay:.5s">No calendar to wait for, no Monday to start on. Just a few minutes — we begin here.</p>`,
+   cta:S.profile?'Back to my path →':'Begin →',ok:true,final:done}
+ ],{onExit:done,exitLabel:'Skip'});
+}
 
 // ---------- Onboarding ----------
 function onboarding(){const p={name:'',why:'',engagement:'I commit to coming back every day, even for a single box. A missed day erases nothing.',mood:50};
@@ -176,6 +206,7 @@ function settingsView(){setTheme('b');const st=S.settings;
  <label class="toggle"><span>Notifications<br><span class="small">If your browser allows it; the app must be open or installed.</span></span><input type="checkbox" id="nt" ${st.notif?'checked':''} style="width:24px;height:24px;accent-color:#1fa463"></label>
  <button class="btn" id="sv" style="margin-top:20px">Save</button></section>
  <section class="blk w"><p class="sc">Jokers</p><h2 class="big">${S.jokers}</h2><p class="lead">joker(s) left. A joker protects your thread on a day you couldn't make it.</p></section>
+ <section class="blk w"><p class="sc">About</p><button class="btn ghost" onclick="go('intro')">What is Consistency? →</button></section>
  <section class="blk b"><p class="sc">Start over</p><p class="lead">Clears your pages and starts again from day 1. Not a failure: a fresh start.</p><button class="btn no" id="rs" style="margin-top:16px">Restart the path</button></section></div>`;window.scrollTo(0,0);
  document.getElementById('sv').onclick=async()=>{st.morning=val(app,'#mo');st.evening=val(app,'#ev');st.notif=document.getElementById('nt').checked;
   if(st.notif&&'Notification'in window){const p=await Notification.requestPermission();if(p!=='granted'){st.notif=false;toast('Notifications not allowed — no problem.')}}else if(st.notif){st.notif=false;toast('Notifications are not available here.')}

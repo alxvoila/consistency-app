@@ -61,3 +61,10 @@ header{flex-direction:column;align-items:stretch;gap:10px;padding-bottom:0;borde
 header .brand{font:900 20px var(--serif);letter-spacing:-.01em;text-transform:none}
 header nav{gap:22px;padding:8px 0 10px;border-top:1px solid var(--line)}
 .page{padding-top:calc(env(safe-area-inset-top) + 100px)}
+/* intro */
+.rv{display:inline-block;animation:rv .7s cubic-bezier(.2,.8,.2,1) both}p.rv,div.rv{display:block}
+@keyframes rv{from{opacity:0;transform:translateY(18px)}}
+.path{display:flex;flex-direction:column;gap:14px}.prow{display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid var(--line);padding-bottom:12px}
+.prow .serif{font-size:24px;white-space:nowrap}.pd{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}.pd i{width:9px;height:9px;border-radius:50%;animation:rv .4s both}
+.steps{display:flex;flex-direction:column;gap:2px}.steps div{display:flex;flex-direction:column;gap:4px;padding:12px 0;border-bottom:1px solid var(--line)}.steps .serif{font-size:21px}
+.intro-face svg{width:84px!important;margin:6px auto 0}
