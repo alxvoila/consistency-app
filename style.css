@@ -27,7 +27,6 @@ button{font-family:inherit;cursor:pointer}
 .field{border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;color:var(--fg);font:400 24px var(--serif);padding:10px 0;width:100%;outline:none}
 .field:focus{border-color:var(--fg)}textarea.field{min-height:150px;resize:none;line-height:1.4;font-size:21px}
 input[type=time].field{width:auto;font-size:28px}
-.ph{display:inline-block;font:600 10px var(--sans);letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--line);color:var(--mut);padding:4px 8px;border-radius:20px}
 /* smiley slider */
 .face svg{width:min(230px,56vw);height:auto;display:block;margin:auto}.fc{fill:var(--fg)}.ft{fill:var(--bg)}.fm{stroke:var(--bg);stroke-width:9;fill:none;stroke-linecap:round}
 .lab{font-family:var(--serif);font-size:34px;font-weight:700;text-align:center;margin-top:10px}

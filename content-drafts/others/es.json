@@ -1,0 +1,98 @@
+{"pauses":{
+"bleu-basic":{"w":"Respira.","sub":"Días {a} a {b} ({level}) terminados. Tu primera semana. Deja el lápiz un minuto antes de seguir.","qs":[
+ {"q":"Después de estos 7 días, ¿cómo te sientes?","s":["Agotado","Cansado","Bien","Muy bien","Ligero"]},
+ "¿Qué gesto fue el más fácil de repetir?",
+ {"q":"Volver cada día fue…","s":["Muy duro","Duro","Factible","Fácil","Natural"]},
+ "Un momento en que casi lo dejas, y lo que te hizo volver:",
+ "Lo que ha cambiado, aunque sea un poquito, en tus mañanas:",
+ "Tus notas, como salgan:"]},
+"bleu-medium":{"w":"Mira.","sub":"Días {a} a {b} ({level}). Dos semanas con la sombra avanzando contigo. Mira un poco el camino.","qs":[
+ {"q":"¿Tu energía, comparada con el día 1?","s":["Más baja","Algo menos","Igual","Algo más","Mucho más alta"]},
+ "El gesto de este escalón que te sorprendió:",
+ "El que te saltaste, y por qué. Sin juzgarte:",
+ {"q":"¿Tu espacio, ahora mismo?","s":["Abarrotado","Cargado","Neutro","Más despejado","Ligero"]},
+ "Si estos siete días fueran un tiempo meteorológico, serían:",
+ "Tus notas:"]},
+"bleu-intense":{"w":"Forma.","sub":"Días {a} a {b} ({level}). Tu día tomó forma: mañana, tarde y noche. Veamos cuál.","qs":[
+ {"q":"¿Tu día tomó forma de verdad?","s":["Nada","Un poco","A medias","Bastante","Sí, de verdad"]},
+ "Tu momento favorito: ¿mañana, tarde o noche? ¿Por qué?",
+ "Lo que aplazabas y por fin te atreviste a empezar:",
+ {"q":"¿Tu sueño, estos días?","s":["Malo","Regular","Normal","Bueno","Excelente"]},
+ "Lo que le dirías a alguien que empieza su día 1:",
+ "Tus notas:"]},
+"vert-basic":{"w":"Crece.","sub":"Días {a} a {b} ({level}). Catorce casillas verdes. Mira lo que empieza a crecer.","qs":[
+ {"q":"¿Tu ánimo, después de estas dos semanas?","s":["Bajo","Frágil","Estable","Bueno","Radiante"]},
+ "La pequeña alegría de estos 14 días que te viene primero:",
+ "Algo que dejaste ir y que no echas nada de menos:",
+ {"q":"Tus casillas marcadas las vives como…","s":["Una carga","Un esfuerzo","Un hábito","Un placer","Un orgullo"]},
+ "Una persona que fue importante en estas dos semanas:",
+ "Tus notas:"]},
+"vert-medium":{"w":"Más lejos.","sub":"Días {a} a {b} ({level}). Has pasado la mitad de los 90 días. Tómate el tiempo de sentirlo.","qs":[
+ {"q":"¿Tu cuerpo, ahora mismo?","s":["Pesado","Rígido","Normal","Tonificado","Con mucho impulso"]},
+ "La primera vez de estos 14 días de la que estás más orgulloso u orgullosa:",
+ "Tu alegría programada: ¿la viviste? Cuéntala en una frase:",
+ {"q":"¿Tu tiempo de pantalla, comparado con el principio?","s":["Más alto","Igual","Algo menos","Menos","Mucho menos"]},
+ "Algo que ahora haces sin pensarlo siquiera:",
+ "Tus notas:"]},
+"vert-intense":{"w":"Raíces.","sub":"Días {a} a {b} ({level}). El escalón más intenso del capítulo verde. Lo que se sostiene ahora tiene raíces.","qs":[
+ {"q":"El reto más fuerte de este escalón fue…","s":["Imposible","Muy duro","Duro","Factible","Fácil"]},
+ "El no que dijiste, y lo que te devolvió:",
+ "Lo que hiciste con tus 15 minutos de alba:",
+ {"q":"¿Tu cabeza, ahora mismo?","s":["Abarrotada","Agitada","Normal","Tranquila","Clara"]},
+ "En 42 días verdes, ¿qué echó raíces en ti?",
+ "Tus notas:"]},
+"orange-medium":{"w":"Engranajes.","sub":"Días {a} a {b} ({level}). Tus gestos empiezan a moverse unos a otros. Escucha el mecanismo.","qs":[
+ {"q":"¿Tus gestos se encadenan solos?","s":["Todavía no","Rara vez","A veces","A menudo","Solos"]},
+ "Tus 3 engranajes, y por qué esos:",
+ "El cumplido o la sorpresa que más te tocó, dado o recibido:",
+ {"q":"¿Tu ritmo de vida, ahora mismo?","s":["Demasiado rápido","Con prisa","Justo","Sereno","Lento y bueno"]},
+ "Un pequeño ajuste antes del último escalón:",
+ "Tus notas:"]},
+"orange-complexe":{"w":"Mecanismo.","sub":"Días {a} a {b} ({level}). El día 90 ya está detrás de ti. Tu reloj funciona. Una última pausa antes del violeta.","qs":[
+ {"q":"En el día 90, te sientes…","s":["Agotado","Cansado","Contento","Orgulloso","Transformado"]},
+ "Tu día ideal: ¿qué te enseñó sobre ti?",
+ "Tu lema, reescrito aquí de memoria:",
+ {"q":"¿Tu confianza para seguir sin el cuaderno?","s":["Baja","Dudosa","Media","Buena","Sólida"]},
+ "La persona que te llevaste contigo, o la que te gustaría llevar:",
+ "Tus notas:"]}},
+"bilans":{
+"bleu":{"w":"El círculo.","sub":"Veintiún días de sol detrás de ti. Mira la sombra que has dibujado.","qs":[
+ "El capítulo azul en tres palabras:",
+ {"q":"Comparado con el día 1, te sientes…","s":["Igual","Algo mejor","Mejor","Mucho mejor","Cambiado"]},
+ "El gesto azul que te llevas al capítulo verde:",
+ "Aquello de lo que estás orgulloso u orgullosa, aunque sea pequeño:",
+ "Una promesa para las dos semanas que vienen:"]},
+"vert":{"w":"La página.","sub":"Cuarenta y dos días verdes. El calendario ha girado seis semanas para ti. Antes de pasar la página, mírala.","qs":[
+ "Lo que creció en ti durante el capítulo verde:",
+ {"q":"La constancia, para ti, ahora es…","s":["Una lucha","Un esfuerzo","Un ritmo","Algo natural","Una alegría"]},
+ "El día verde que te gustaría volver a vivir, y por qué:",
+ "Lo que aprendiste de los demás, y de ti con ellos:",
+ "El gesto verde que te llevas al mes naranja:"]},
+"orange":{"w":"Tictac.","sub":"El mes naranja ha terminado. Tu reloj funciona solo. Escúchalo un instante.","qs":[
+ "Tu mes naranja en una imagen:",
+ {"q":"¿Tus engranajes giran sin ti?","s":["Todavía no","Un poco","A medias","Casi","Sí"]},
+ "El día más complejo, y cómo lo atravesaste:",
+ "Lo que reparaste, depuraste o empezaste este mes:",
+ "Aquello de lo que estás más orgulloso u orgullosa, en una frase:"]}},
+"finals":{
+"synth":{"label":"La gran síntesis","w":"Tú.","sub":"Algunas preguntas para medir el camino entre tu día 1 y hoy.","qs":[
+ "¿Quién eras el día 1?",
+ "¿Quién eres hoy?",
+ {"q":"¿Tu energía, el día 1?","s":["Agotada","Baja","Media","Buena","Alta"]},
+ {"q":"¿Tu energía, hoy?","s":["Agotada","Baja","Media","Buena","Alta"]},
+ "Los tres gestos que más cambiaron tus días:",
+ "El día más difícil, y lo que te hizo volver:",
+ "Tus 90 días en una sola frase:"]},
+"relire":{"label":"Relectura guiada","w":"Relee.","sub":"Abre tu Diario al lado. Releemos juntos, página a página, sin juzgar.","qs":[
+ "Relee tu primerísima línea. ¿Qué te hace sentir hoy?",
+ "Busca la línea más feliz de tus 90 días. Cópiala aquí:",
+ "Busca un día difícil. ¿Qué le dirías a la persona que lo escribió?",
+ "Una palabra que aparece a menudo en tus páginas:",
+ "Lo que más te llama la atención al releer:"]},
+"next":{"label":"Lo que puedo mejorar","w":"Mañana.","sub":"Nada que lamentar. Solo algunos ajustes y tus próximos pasos.","qs":[
+ "Un gesto que no te iba, y cómo podrías adaptarlo:",
+ "El momento del día en que más a menudo desconectas:",
+ {"q":"¿Cuántas ganas tienes de seguir?","s":["Pocas","Dudosas","Reales","Fuertes","Enormes"]},
+ "Tus 3 próximos pasos, pequeños y concretos:",
+ "¿Quién o qué te ayudará a volver los días difíciles?"]}},
+"ui":{"f_relire":"Relectura guiada","f_next":"Lo que puedo mejorar","f_story":"El reloj de pulsera nació cuando quisimos llevar el tiempo con nosotros. Hoy, tu ritmo también cabe en tu bolsillo.","letter_lead":"Escríbele a la persona que serás dentro de 90 días. Lo que esperas para ella, lo que no quieres que olvide.","letter_ph":"Hoy he terminado mis 90 días…","dip_quote":"Un día perdido no borra nada. Noventa días volviendo, todavía menos.","dip_witness":"Testigos: el reloj de sol, el calendario, el reloj mecánico y el reloj de pulsera.","violet_list":"Síntesis · relectura · próximos pasos · carta a mí mismo · diploma"}}

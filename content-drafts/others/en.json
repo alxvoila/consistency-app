@@ -1,0 +1,98 @@
+{"pauses":{
+"bleu-basic":{"w":"Breathe.","sub":"Days {a} to {b} ({level}) done. Your first week. Put your pencil down for a minute before moving on.","qs":[
+ {"q":"After these 7 days, how do you feel?","s":["Drained","Tired","Okay","Good","Light"]},
+ "Which habit was the easiest to repeat?",
+ {"q":"Coming back every day was…","s":["Very hard","Hard","Doable","Easy","Natural"]},
+ "A moment you almost gave up, and what brought you back:",
+ "What changed, even a tiny bit, in your mornings:",
+ "Your notes, any way you like:"]},
+"bleu-medium":{"w":"Look.","sub":"Days {a} to {b} ({level}). Two weeks of the shadow moving with you. Take a look at the path.","qs":[
+ {"q":"Your energy, compared with day 1?","s":["Lower","A bit lower","The same","A bit higher","Much higher"]},
+ "The habit from this step that surprised you:",
+ "The one you skipped, and why. No judging:",
+ {"q":"The space around you, right now?","s":["Cluttered","Busy","Neutral","Clearer","Light"]},
+ "If these seven days were weather, they'd be:",
+ "Your notes:"]},
+"bleu-intense":{"w":"Shape.","sub":"Days {a} to {b} ({level}). Your day took a shape: morning, afternoon, evening. Let's see which one.","qs":[
+ {"q":"Did your day really take shape?","s":["Not at all","A little","Halfway","Mostly","Yes, really"]},
+ "Your favorite moment: morning, afternoon or evening? Why?",
+ "The thing you kept putting off that you finally dared to start:",
+ {"q":"Your sleep, these days?","s":["Poor","Meh","Average","Good","Great"]},
+ "What you'd tell someone starting their day 1:",
+ "Your notes:"]},
+"vert-basic":{"w":"Grow.","sub":"Days {a} to {b} ({level}). Fourteen green boxes. Look at what's starting to grow.","qs":[
+ {"q":"Your mood, after these two weeks?","s":["Low","Fragile","Steady","Good","Glowing"]},
+ "The little joy from these 14 days that comes back first:",
+ "Something you let go of and don't miss at all:",
+ {"q":"Your ticked boxes feel like…","s":["A chore","An effort","A habit","A pleasure","A source of pride"]},
+ "Someone who mattered during these two weeks:",
+ "Your notes:"]},
+"vert-medium":{"w":"Further.","sub":"Days {a} to {b} ({level}). You've passed the halfway point of the 90 days. Take time to feel it.","qs":[
+ {"q":"Your body, right now?","s":["Heavy","Stiff","Normal","Toned","Full of drive"]},
+ "The first time from these 14 days you're proudest of:",
+ "Your scheduled joy: did you live it? Tell it in one sentence:",
+ {"q":"Your screen time, compared with the start?","s":["Higher","The same","A bit less","Less","Much less"]},
+ "Something you now do without even thinking:",
+ "Your notes:"]},
+"vert-intense":{"w":"Roots.","sub":"Days {a} to {b} ({level}). The most intense step of the green chapter. What holds now has roots.","qs":[
+ {"q":"The toughest challenge of this step was…","s":["Impossible","Very hard","Hard","Doable","Easy"]},
+ "The no you said, and what it gave back to you:",
+ "What you did with your 15 minutes of dawn:",
+ {"q":"Your mind, right now?","s":["Cluttered","Restless","Normal","Calm","Clear"]},
+ "In 42 green days, what took root in you?",
+ "Your notes:"]},
+"orange-medium":{"w":"Gears.","sub":"Days {a} to {b} ({level}). Your habits are starting to turn one another. Listen to the mechanism.","qs":[
+ {"q":"Do your habits link up on their own?","s":["Not yet","Rarely","Sometimes","Often","On their own"]},
+ "Your 3 gears, and why those ones:",
+ "The compliment or surprise that touched you most, given or received:",
+ {"q":"Your pace of life, right now?","s":["Too fast","Rushed","Just right","Settled","Slow and good"]},
+ "One small adjustment to make before the last step:",
+ "Your notes:"]},
+"orange-complexe":{"w":"Mechanism.","sub":"Days {a} to {b} ({level}). Day 90 is behind you. Your clock is running. One last pause before purple.","qs":[
+ {"q":"On day 90, you feel…","s":["Exhausted","Tired","Happy","Proud","Transformed"]},
+ "Your ideal day: what did it teach you about yourself?",
+ "Your motto, rewritten here from memory:",
+ {"q":"Your confidence to keep going without the notebook?","s":["Low","Unsure","Medium","Good","Solid"]},
+ "The person you brought along, or the one you'd like to:",
+ "Your notes:"]}},
+"bilans":{
+"bleu":{"w":"The circle.","sub":"Twenty-one days of sunshine behind you. Look at the shadow you've drawn.","qs":[
+ "The blue chapter in three words:",
+ {"q":"Compared with day 1, you feel…","s":["The same","A bit better","Better","Much better","Changed"]},
+ "The blue habit you're taking into the green chapter:",
+ "What you're proud of, even if it's small:",
+ "A promise for the next two weeks:"]},
+"vert":{"w":"The page.","sub":"Forty-two green days. The calendar has turned six weeks for you. Before turning the page, look at it.","qs":[
+ "What grew in you during the green chapter:",
+ {"q":"Consistency, for you, is now…","s":["A struggle","An effort","A rhythm","Second nature","A joy"]},
+ "The green day you'd like to live again, and why:",
+ "What you learned about others, and about yourself with them:",
+ "The green habit you're taking into the orange month:"]},
+"orange":{"w":"Tick-tock.","sub":"The orange month is over. Your clock runs by itself. Listen to it for a moment.","qs":[
+ "Your orange month in one image:",
+ {"q":"Do your gears turn without you?","s":["Not yet","A little","Halfway","Almost","Yes"]},
+ "The most complex day, and how you got through it:",
+ "What you mended, pared down or started this month:",
+ "What you're proudest of, in one sentence:"]}},
+"finals":{
+"synth":{"label":"The big synthesis","w":"You.","sub":"A few questions to measure the road between your day 1 and today.","qs":[
+ "Who were you on day 1?",
+ "Who are you today?",
+ {"q":"Your energy on day 1?","s":["Drained","Low","Medium","Good","High"]},
+ {"q":"Your energy today?","s":["Drained","Low","Medium","Good","High"]},
+ "The three habits that changed your days the most:",
+ "The hardest day, and what brought you back:",
+ "Your 90 days in a single sentence:"]},
+"relire":{"label":"Guided rereading","w":"Reread.","sub":"Open your Journal alongside. We reread together, page by page, without judging.","qs":[
+ "Reread your very first line. How does it make you feel today?",
+ "Find the happiest line of your 90 days. Copy it here:",
+ "Find a hard day. What would you like to tell the person who wrote it?",
+ "A word that comes up often in your pages:",
+ "What strikes you most as you reread:"]},
+"next":{"label":"What I can improve","w":"Tomorrow.","sub":"Nothing to regret. Just a few adjustments and your next steps.","qs":[
+ "A habit that didn't suit you, and how you could adapt it:",
+ "The time of day when you drift off most often:",
+ {"q":"Your desire to keep going?","s":["Weak","Unsure","Real","Strong","Huge"]},
+ "Your next 3 steps, small and concrete:",
+ "Who or what will help you come back on hard days?"]}},
+"ui":{"f_relire":"Guided rereading","f_next":"What I can improve","f_story":"The watch was born when people wanted to carry time with them. Today, your rhythm fits in your pocket too.","letter_lead":"Write to the person you'll be in 90 days. What you hope for them, what you don't want them to forget.","letter_ph":"Today I finished my 90 days…","dip_quote":"A missed day erases nothing. Ninety days of coming back, even less so.","dip_witness":"Witnessed by the sundial, the calendar, the mechanical clock and the watch.","violet_list":"Synthesis · rereading · next steps · letter to myself · diploma"}}

@@ -1,0 +1,98 @@
+{"pauses":{
+"bleu-basic":{"w":"Souffle.","sub":"Jours {a} à {b} ({level}) terminés. Ta première semaine. Pose ton crayon une minute avant de continuer.","qs":[
+ {"q":"Après ces 7 jours, tu te sens comment ?","s":["Vidé(e)","Fatigué(e)","Ça va","Bien","Léger(e)"]},
+ "Le geste le plus facile à refaire, c'était lequel ?",
+ {"q":"Revenir chaque jour, c'était…","s":["Très dur","Dur","Faisable","Facile","Naturel"]},
+ "Un moment où tu as failli lâcher, et ce qui t'a fait revenir :",
+ "Ce qui a changé, même un tout petit peu, dans tes matins :",
+ "Tes notes, en vrac :"]},
+"bleu-medium":{"w":"Regarde.","sub":"Jours {a} à {b} ({level}). Deux semaines que l'ombre avance avec toi. Regarde un peu le chemin.","qs":[
+ {"q":"Ton énergie, comparée au jour 1 ?","s":["Plus basse","Un peu moins","Pareille","Un peu plus","Bien plus haute"]},
+ "Le geste de cette marche qui t'a surpris(e) :",
+ "Celui que tu as sauté, et pourquoi. Sans te juger :",
+ {"q":"Ton espace autour de toi, en ce moment ?","s":["Encombré","Chargé","Neutre","Plus clair","Léger"]},
+ "Si ces sept jours étaient une météo, ce serait :",
+ "Tes notes :"]},
+"bleu-intense":{"w":"Forme.","sub":"Jours {a} à {b} ({level}). Ta journée a pris une forme : matin, après-midi, soir. On regarde laquelle.","qs":[
+ {"q":"Ta journée a-t-elle vraiment pris forme ?","s":["Pas du tout","Un peu","À moitié","Plutôt","Oui, vraiment"]},
+ "Ton moment préféré : le matin, l'après-midi ou le soir ? Pourquoi ?",
+ "La chose repoussée que tu as enfin osé commencer :",
+ {"q":"Ton sommeil, ces jours-ci ?","s":["Mauvais","Bof","Moyen","Bon","Excellent"]},
+ "Ce que tu dirais à quelqu'un qui commence son jour 1 :",
+ "Tes notes :"]},
+"vert-basic":{"w":"Pousse.","sub":"Jours {a} à {b} ({level}). Quatorze cases vertes. Regarde ce qui commence à pousser.","qs":[
+ {"q":"Ton moral, après ces deux semaines ?","s":["Bas","Fragile","Stable","Bon","Rayonnant"]},
+ "Le petit bonheur de ces 14 jours qui te revient en premier :",
+ "Ce que tu as laissé partir et qui ne te manque pas du tout :",
+ {"q":"Tes cases cochées, tu les vis comme…","s":["Une corvée","Un effort","Une habitude","Un plaisir","Une fierté"]},
+ "Une personne qui a compté pendant ces deux semaines :",
+ "Tes notes :"]},
+"vert-medium":{"w":"Plus loin.","sub":"Jours {a} à {b} ({level}). Tu as passé la moitié des 90 jours. Prends le temps de le sentir.","qs":[
+ {"q":"Ton corps, en ce moment ?","s":["Lourd","Raide","Normal","Tonique","Plein d'élan"]},
+ "La première fois de ces 14 jours dont tu es le plus fier ou la plus fière :",
+ "Ta joie programmée : tu l'as vécue ? Raconte-la en une phrase :",
+ {"q":"Ton temps d'écran, comparé au début ?","s":["Plus haut","Pareil","Un peu moins","Moins","Bien moins"]},
+ "Une chose que tu fais maintenant sans même y penser :",
+ "Tes notes :"]},
+"vert-intense":{"w":"Racines.","sub":"Jours {a} à {b} ({level}). La marche la plus intense du chapitre vert. Ce qui tient maintenant a des racines.","qs":[
+ {"q":"Le défi le plus fort de cette marche, c'était…","s":["Impossible","Très dur","Dur","Faisable","Facile"]},
+ "Le non que tu as dit, et ce qu'il t'a rendu :",
+ "Ce que tu as fait de tes 15 minutes d'aube :",
+ {"q":"Ta tête, en ce moment ?","s":["Encombrée","Agitée","Normale","Calme","Claire"]},
+ "En 42 jours verts, qu'est-ce qui a pris racine en toi ?",
+ "Tes notes :"]},
+"orange-medium":{"w":"Rouages.","sub":"Jours {a} à {b} ({level}). Tes gestes commencent à s'entraîner les uns les autres. Écoute le mécanisme.","qs":[
+ {"q":"Tes gestes s'enchaînent-ils tout seuls ?","s":["Pas encore","Rarement","Parfois","Souvent","Tout seuls"]},
+ "Tes 3 rouages, et pourquoi ceux-là :",
+ "Le compliment ou la surprise qui t'a le plus touché(e), donné ou reçu :",
+ {"q":"Ton rythme de vie, en ce moment ?","s":["Trop rapide","Pressé","Juste","Posé","Lent et bon"]},
+ "Un petit réglage à faire avant la dernière marche :",
+ "Tes notes :"]},
+"orange-complexe":{"w":"Mécanisme.","sub":"Jours {a} à {b} ({level}). Le jour 90 est derrière toi. Ton horloge tourne. Une dernière pause avant le violet.","qs":[
+ {"q":"Au jour 90, tu te sens…","s":["Épuisé(e)","Fatigué(e)","Content(e)","Fier(e)","Transformé(e)"]},
+ "Ta journée idéale : qu'est-ce qu'elle t'a appris sur toi ?",
+ "Ta devise, réécrite ici, de mémoire :",
+ {"q":"Ta confiance pour continuer sans le cahier ?","s":["Faible","Hésitante","Moyenne","Bonne","Solide"]},
+ "La personne que tu as embarquée, ou celle que tu aimerais embarquer :",
+ "Tes notes :"]}},
+"bilans":{
+"bleu":{"w":"Le cercle.","sub":"Vingt et un jours de soleil derrière toi. Regarde l'ombre que tu as dessinée.","qs":[
+ "Le chapitre bleu en trois mots :",
+ {"q":"Par rapport au jour 1, tu te sens…","s":["Pareil","Un peu mieux","Mieux","Bien mieux","Changé(e)"]},
+ "Le geste bleu que tu emportes dans le chapitre vert :",
+ "Ce dont tu es fier ou fière, même si c'est petit :",
+ "Une promesse pour les deux semaines qui viennent :"]},
+"vert":{"w":"La page.","sub":"Quarante-deux jours verts. Le calendrier a tourné six semaines pour toi. Avant de tourner la page, regarde-la.","qs":[
+ "Ce qui a poussé en toi pendant le chapitre vert :",
+ {"q":"La régularité, pour toi, maintenant, c'est…","s":["Une lutte","Un effort","Un rythme","Une évidence","Une joie"]},
+ "Le jour vert que tu aimerais revivre, et pourquoi :",
+ "Ce que tu as appris sur les autres, et sur toi avec eux :",
+ "Le geste vert que tu emportes dans le mois orange :"]},
+"orange":{"w":"Tic-tac.","sub":"Le mois orange est terminé. Ton horloge tourne toute seule. Écoute-la un instant.","qs":[
+ "Ton mois orange en une image :",
+ {"q":"Tes rouages tournent-ils sans toi ?","s":["Pas encore","Un peu","À moitié","Presque","Oui"]},
+ "Le jour le plus complexe, et comment tu l'as traversé :",
+ "Ce que tu as réparé, épuré ou commencé ce mois-ci :",
+ "Ce dont tu es le plus fier ou la plus fière, en une phrase :"]}},
+"finals":{
+"synth":{"label":"La grande synthèse","w":"Toi.","sub":"Quelques questions pour mesurer le chemin entre ton jour 1 et aujourd'hui.","qs":[
+ "Qui étais-tu au jour 1 ?",
+ "Qui es-tu aujourd'hui ?",
+ {"q":"Ton énergie, au jour 1 ?","s":["À plat","Faible","Moyenne","Bonne","Haute"]},
+ {"q":"Ton énergie, aujourd'hui ?","s":["À plat","Faible","Moyenne","Bonne","Haute"]},
+ "Les trois gestes qui ont le plus changé tes journées :",
+ "Le jour le plus difficile, et ce qui t'a fait revenir :",
+ "Tes 90 jours en une seule phrase :"]},
+"relire":{"label":"Relecture guidée","w":"Relis.","sub":"Ouvre ton Journal à côté. On relit ensemble, page après page, sans juger.","qs":[
+ "Relis ta toute première ligne. Qu'est-ce qu'elle te fait aujourd'hui ?",
+ "Trouve la ligne la plus heureuse de tes 90 jours. Recopie-la ici :",
+ "Trouve un jour difficile. Qu'aurais-tu envie de dire à la personne qui l'a écrit ?",
+ "Un mot qui revient souvent dans tes pages :",
+ "Ce qui te frappe le plus en relisant :"]},
+"next":{"label":"Ce que je peux améliorer","w":"Demain.","sub":"Rien à regretter. Juste quelques réglages et tes prochains pas.","qs":[
+ "Un geste qui ne t'allait pas, et comment tu pourrais l'adapter :",
+ "Le moment de la journée où tu décroches le plus souvent :",
+ {"q":"Ton envie de continuer ?","s":["Faible","Hésitante","Réelle","Forte","Immense"]},
+ "Tes 3 prochains pas, petits et concrets :",
+ "Qui ou quoi va t'aider à revenir, les jours difficiles ?"]}},
+"ui":{"f_relire":"Relecture guidée","f_next":"Ce que je peux améliorer","f_story":"La montre est née quand on a voulu emporter le temps avec soi. Aujourd'hui, ton rythme aussi tient dans ta poche.","letter_lead":"Écris à la personne que tu seras dans 90 jours. Ce que tu espères pour elle, ce que tu ne veux pas qu'elle oublie.","letter_ph":"Aujourd'hui, j'ai terminé mes 90 jours…","dip_quote":"Un jour raté n'efface rien. Quatre-vingt-dix jours revenus, encore moins.","dip_witness":"Témoins : le cadran solaire, le calendrier, l'horloge mécanique et la montre.","violet_list":"Synthèse · relecture · prochains pas · lettre à moi-même · diplôme"}}

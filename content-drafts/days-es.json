@@ -1,0 +1,1622 @@
+[
+ {
+  "n": 1,
+  "source": "book",
+  "intro": "Hoy colocas la primera piedra. Es pequeña, y así es perfecta.",
+  "task": [
+   "Hago una pequeña tarea",
+   "solo una, que lleve menos de 5 minutos.",
+   "Haz"
+  ],
+  "ideas": "hacer la cama · lavar una taza · guardar los zapatos · abrir la ventana",
+  "fill": "Mi pequeña tarea de hoy:",
+  "motto": [
+   "Hayas marcado una casilla o las tres, has llegado hasta aquí. Eso es el día 1.",
+   "Mañana la sombra avanza un paso. Tú también."
+  ],
+  "chapter": "bleu",
+  "level": "basic"
+ },
+ {
+  "n": 2,
+  "source": "book",
+  "intro": "Ayer empezaste. Hoy vuelves. Eso ya es constancia.",
+  "task": [
+   "Hago la cama",
+   "aunque sea rápido, aunque no quede perfecta: solo estirada.",
+   "Cama"
+  ],
+  "ideas": "sábanas estiradas · almohada en su sitio · manta doblada",
+  "fill": "Cómo me sentí al ver la cama hecha:",
+  "motto": [
+   "El sol no se pregunta si tiene ganas de salir. Simplemente sale.",
+   "Dos días seguidos: tu sombra empieza a dibujar un camino."
+  ],
+  "chapter": "bleu",
+  "level": "basic"
+ },
+ {
+  "n": 3,
+  "source": "book",
+  "intro": "Un poco de aire, un poco de luz: a veces es todo lo que hace falta para despertar el día.",
+  "task": [
+   "Abro la ventana y respiro",
+   "3 respiraciones profundas, despacio, de cara a la luz del día.",
+   "Respira"
+  ],
+  "ideas": "inspirar por la nariz · soltar el aire suavemente · mirar el cielo",
+  "fill": "Lo que vi o sentí por la ventana:",
+  "motto": [
+   "Un reloj de sol necesita luz para funcionar. Tú también.",
+   "Tres días: ya estás a mitad de semana."
+  ],
+  "chapter": "bleu",
+  "level": "basic"
+ },
+ {
+  "n": 4,
+  "source": "book",
+  "intro": "No hace falta ordenarlo todo. Una sola cosa en su sitio, y el espacio respira.",
+  "task": [
+   "Ordeno una sola cosa",
+   "un objeto, un rincón, una superficie. Nada más.",
+   "Ordena"
+  ],
+  "ideas": "mi mesita de noche · el fregadero · mi bolso · la esquina de mi escritorio",
+  "fill": "Hoy he ordenado:",
+  "motto": [
+   "Una sombra no se mueve rápido. Pero nunca retrocede.",
+   "Cuatro días: ya pasaste la mitad."
+  ],
+  "chapter": "bleu",
+  "level": "basic"
+ },
+ {
+  "n": 5,
+  "source": "book",
+  "intro": "A tus piernas también les gusta la regularidad. Cinco minutos bastan para saludarlas.",
+  "task": [
+   "Camino 5 minutos",
+   "fuera si es posible, si no, por casa.",
+   "Camina"
+  ],
+  "ideas": "dar la vuelta a la manzana · ir a por el pan · caminar mientras hablo por teléfono",
+  "fill": "Dónde caminé:",
+  "motto": [
+   "El sol cruza el cielo sin prisa. Un paso tras otro.",
+   "Cinco días: tu cuerpo empieza a reconocer el ritmo."
+  ],
+  "chapter": "bleu",
+  "level": "basic"
+ },
+ {
+  "n": 6,
+  "source": "book",
+  "intro": "Esta noche le haces un pequeño regalo a la persona que serás mañana por la mañana: tú.",
+  "task": [
+   "Preparo una cosa para mañana",
+   "esta noche, antes de dormir: solo una cosa.",
+   "Prepara"
+  ],
+  "ideas": "mi ropa · mi bolso · mi vaso de agua en la mesa · mi lista de la compra",
+  "fill": "Lo que preparé para mañana:",
+  "motto": [
+   "Los antiguos sabían dónde caería la sombra de mañana. Preparar ya es avanzar.",
+   "Seis días: mañana terminas tu primera semana."
+  ],
+  "chapter": "bleu",
+  "level": "basic"
+ },
+ {
+  "n": 7,
+  "source": "book",
+  "intro": "Último día de la semana Basic. Hoy eliges el gesto que más bien te ha hecho.",
+  "task": [
+   "Repito mi tarea favorita de la semana",
+   "la que más bien te ha hecho.",
+   "Repite"
+  ],
+  "ideas": "hacer la cama · abrir la ventana · ordenar una cosa · caminar · preparar mañana",
+  "fill": "Mi tarea favorita de la semana:",
+  "motto": [
+   "Siete amaneceres. Siete pequeñas sombras. Una semana entera.",
+   "Bien hecho: pasa la página para tu pausa de reflexión."
+  ],
+  "chapter": "bleu",
+  "level": "basic"
+ },
+ {
+  "n": 8,
+  "source": "draft",
+  "intro": "Nuevo escalón, mismos pies. Hoy solo añadimos un poco de movimiento.",
+  "task": [
+   "Me estiro 5 minutos al despertar",
+   "despacio, como un gato que sale de su siesta.",
+   "Estira"
+  ],
+  "ideas": "brazos al cielo · girar los hombros · tocarme los dedos de los pies · girar la cabeza despacio",
+  "fill": "La parte de mi cuerpo que me dio las gracias:",
+  "motto": [
+   "Al amanecer, la sombra del reloj de sol se estira a lo largo del suelo. Haz como ella.",
+   "Ocho días: empieza un nuevo escalón, y ya estás en él."
+  ],
+  "chapter": "bleu",
+  "level": "medium"
+ },
+ {
+  "n": 9,
+  "source": "draft",
+  "intro": "Una superficie vacía es un pequeño espacio para respirar. Hoy liberas una.",
+  "task": [
+   "Libero una superficie",
+   "10 minutos, temporizador en marcha, y dejo encima solo lo esencial.",
+   "Libera"
+  ],
+  "ideas": "la mesa de la cocina · la encimera · el escritorio · el alféizar de la ventana",
+  "fill": "Lo que encontré debajo del desorden:",
+  "motto": [
+   "El reloj de sol casi no tiene nada: una piedra, un palo, la luz. Y funciona.",
+   "Nueve días: a tu alrededor también algo empieza a respirar."
+  ],
+  "chapter": "bleu",
+  "level": "medium"
+ },
+ {
+  "n": 10,
+  "source": "draft",
+  "intro": "Hoy, una cita muy antigua: tú, el sol y tu sombra.",
+  "task": [
+   "Salgo a buscar mi sombra",
+   "2 minutos fuera: miro dónde cae y apunto la hora.",
+   "Sombra"
+  ],
+  "ideas": "medirla en pasos · hacerle una foto · levantar un brazo y ver cómo me imita",
+  "fill": "Hoy mi sombra se parecía a:",
+  "motto": [
+   "Tu sombra te sigue desde tu primer paso. Nunca ha faltado a un solo día de sol.",
+   "Diez días: ya tienes dos cifras."
+  ],
+  "chapter": "bleu",
+  "level": "medium"
+ },
+ {
+  "n": 11,
+  "source": "draft",
+  "intro": "Un mensajito puede iluminar todo un día. El suyo y el tuyo.",
+  "task": [
+   "Le doy señales de vida a alguien",
+   "un mensaje corto, solo para decirle que pienso en él o en ella.",
+   "Hola"
+  ],
+  "ideas": "un viejo amigo · mi madre o mi padre · una compañera simpática · un vecino",
+  "fill": "A quién le escribí, y por qué a esa persona:",
+  "motto": [
+   "El sol ilumina a todos sin elegir. Un solo rayo basta para dar calor a alguien.",
+   "Once días: tu luz empieza a llegar a los demás."
+  ],
+  "chapter": "bleu",
+  "level": "medium"
+ },
+ {
+  "n": 12,
+  "source": "draft",
+  "intro": "Hoy no comemos más. Comemos más despacio.",
+  "task": [
+   "Saboreo una fruta, de verdad",
+   "despacio, sin pantalla, notando cada bocado.",
+   "Saborea"
+  ],
+  "ideas": "una manzana mordida muy despacio · unos tomates cherry · una mandarina pelada de una vez",
+  "fill": "Tres palabras para describir ese sabor:",
+  "motto": [
+   "El reloj de sol no persigue el mediodía. Espera, y el mediodía llega a él.",
+   "Doce días: te tomas tu tiempo, y el tiempo te lo devuelve."
+  ],
+  "chapter": "bleu",
+  "level": "medium"
+ },
+ {
+  "n": 13,
+  "source": "draft",
+  "intro": "Tu móvil también tiene derecho a descansar. Y tú todavía más.",
+  "task": [
+   "Dejo el móvil en otra habitación",
+   "20 minutos, lejos de la vista, lejos de los dedos.",
+   "Suelta"
+  ],
+  "ideas": "durante la comida · durante el café · durante una ducha un poco larga",
+  "fill": "Lo que noté sin mi móvil:",
+  "motto": [
+   "El reloj de sol nunca ha necesitado batería. Le basta con el cielo.",
+   "Trece días: mañana terminas el escalón Medium."
+  ],
+  "chapter": "bleu",
+  "level": "medium"
+ },
+ {
+  "n": 14,
+  "source": "draft",
+  "intro": "Dos gestos seguidos son el comienzo de una rutina. Hoy haces un dúo.",
+  "task": [
+   "Encadeno dos gestos de la semana",
+   "elijo dos y los hago uno detrás de otro, sin pausa.",
+   "Encadena"
+  ],
+  "ideas": "estirarme y luego liberar una superficie · buscar mi sombra y luego mandar un hola · saborear una fruta y luego soltar el móvil",
+  "fill": "Mi dúo de hoy, y cómo fue:",
+  "motto": [
+   "Catorce sombras en el suelo. Puestas una tras otra, empiezan a dibujar un círculo.",
+   "Dos semanas: bravo, te espera una pausa de reflexión."
+  ],
+  "chapter": "bleu",
+  "level": "medium"
+ },
+ {
+  "n": 15,
+  "source": "draft",
+  "intro": "Bienvenido al escalón Intense. Tu día toma forma: una mañana, una tarde, una noche.",
+  "task": [
+   "Le doy forma a mi día",
+   "escribo un pequeño gesto para la mañana, otro para la tarde y otro para la noche. Y los hago.",
+   "Traza"
+  ],
+  "ideas": "mañana: 5 minutos de estiramientos · tarde: unos pasos al aire libre · noche: preparar el día siguiente",
+  "fill": "El momento del día que más me gustó:",
+  "motto": [
+   "El reloj de sol corta el día en horas. Tú lo cortas en tres bonitos trozos.",
+   "Quince días: tu día ya tiene forma."
+  ],
+  "chapter": "bleu",
+  "level": "intense"
+ },
+ {
+  "n": 16,
+  "source": "draft",
+  "intro": "Hoy tu corazón late un poco más fuerte. Solo un poco, solo para darle una alegría.",
+  "task": [
+   "Camino 20 minutos, 2 de ellos más rápido",
+   "un pequeño sprint caminando en medio, y luego vuelvo a mi paso.",
+   "Acelera"
+  ],
+  "ideas": "una calle más que de costumbre · subir escaleras · caminar con música rápida",
+  "fill": "Cuando aceleré, me sentí:",
+  "motto": [
+   "A mediodía la sombra es la más corta: es la hora en que el sol lo da todo.",
+   "Dieciséis días: tu respiración también se vuelve regular."
+  ],
+  "chapter": "bleu",
+  "level": "intense"
+ },
+ {
+  "n": 17,
+  "source": "draft",
+  "intro": "Hay algo que llevas tiempo aplazando. Hoy lo miras a la cara.",
+  "task": [
+   "Empiezo la tarea que aplazo",
+   "solo 15 minutos. No terminarla: solo empezarla.",
+   "Atrévete"
+  ],
+  "ideas": "un correo pendiente · una cita que pedir · un papel que rellenar · una llamada que hacer",
+  "fill": "Lo que por fin empecé, y cómo me sentí:",
+  "motto": [
+   "Una sombra que miras de frente se vuelve diminuta. Como a mediodía.",
+   "Diecisiete días: te atreves, y eso es nuevo."
+  ],
+  "chapter": "bleu",
+  "level": "intense"
+ },
+ {
+  "n": 18,
+  "source": "draft",
+  "intro": "La noche también merece su rutina. Esta noche, tus pantallas se acuestan antes que tú.",
+  "task": [
+   "Paso mi última hora sin pantallas",
+   "una hora antes de dormir, móvil y tele apagados.",
+   "Apaga"
+  ],
+  "ideas": "leer unas páginas · una infusión junto a la ventana · ordenar con música suave · hablar con alguien",
+  "fill": "Lo que hice con esa hora recuperada:",
+  "motto": [
+   "Cuando el sol se pone, el reloj de sol descansa. Sabe que mañana volverá la luz.",
+   "Dieciocho días: tus noches también aprenden el ritmo."
+  ],
+  "chapter": "bleu",
+  "level": "intense"
+ },
+ {
+  "n": 19,
+  "source": "draft",
+  "intro": "No hace falta ser artista. Hoy solo dejas que tu mano haga.",
+  "task": [
+   "Creo algo durante 10 minutos",
+   "dibujar, escribir, garabatear: sin juzgar, sin borrar.",
+   "Crea"
+  ],
+  "ideas": "dibujar mi taza · escribir cinco líneas sobre un recuerdo · garabatear con música",
+  "fill": "Si mi creación tuviera un título, sería:",
+  "motto": [
+   "El primer reloj de sol fue una simple raya en la arena. Todo empieza con una raya.",
+   "Diecinueve días: dejas huella."
+  ],
+  "chapter": "bleu",
+  "level": "intense"
+ },
+ {
+  "n": 20,
+  "source": "draft",
+  "intro": "Un gracias dicho en voz alta cambia dos días de golpe.",
+  "task": [
+   "Le doy las gracias a tres personas",
+   "en voz alta, mirándolas, y por un motivo real.",
+   "Gracias"
+  ],
+  "ideas": "la panadera · un compañero · alguien de casa · el conductor del autobús",
+  "fill": "El gracias que provocó la mayor sonrisa:",
+  "motto": [
+   "El sol da su luz cada día sin pedir nada. Devuélvele un poquito.",
+   "Veinte días: mañana cierras el capítulo azul."
+  ],
+  "chapter": "bleu",
+  "level": "intense"
+ },
+ {
+  "n": 21,
+  "source": "draft",
+  "intro": "Último día azul. Hoy vives un día entero, de la primera luz a la última.",
+  "task": [
+   "Vivo un día completo",
+   "un gesto por la mañana, otro por la tarde y otro por la noche, elegidos entre mis 21 días.",
+   "Entero"
+  ],
+  "ideas": "mañana: cama hecha y estiramientos · tarde: un paseo o un hola · noche: una hora sin pantallas",
+  "fill": "Mi capítulo azul en una imagen:",
+  "motto": [
+   "Veintiún amaneceres. El reloj de sol ha trazado tu primer círculo completo.",
+   "Capítulo azul terminado. Una pausa, y luego te espera el verde."
+  ],
+  "chapter": "bleu",
+  "level": "intense"
+ },
+ {
+  "n": 22,
+  "source": "draft",
+  "intro": "Nuevo capítulo, nuevo color. El verde es el color de lo que crece a su ritmo.",
+  "task": [
+   "Dibujo mis 14 casillas",
+   "14 cuadraditos en un papel, colgados donde los vea. Marco el de hoy.",
+   "Casilla"
+  ],
+  "ideas": "en un pósit · en el reverso de un sobre · en la nevera · en mi cuaderno",
+  "fill": "Dónde colgué mis 14 casillas:",
+  "motto": [
+   "Un calendario no son más que casillas. Lo que cuenta es lo que pones dentro.",
+   "Veintidós días: se abre ante ti una página toda verde."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 23,
+  "source": "draft",
+  "intro": "Tus piernas te llevan todo el día. Hoy les devuelves un poco de fuerza.",
+  "task": [
+   "Me levanto y me siento 10 veces",
+   "en una silla, despacio, sin manos si puedo.",
+   "Arriba"
+  ],
+  "ideas": "mientras se calienta el agua · después de una llamada · frente a la ventana",
+  "fill": "Lo que dirían mis piernas si pudieran hablar:",
+  "motto": [
+   "Los días del calendario se sostienen unos sobre otros. Cada uno lleva al siguiente.",
+   "Veintitrés días: la fuerza también se construye casilla a casilla."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 24,
+  "source": "draft",
+  "intro": "A menudo guardamos cosas para nada. Hoy, cinco de ellas se van.",
+  "task": [
+   "Dejo ir 5 objetos",
+   "tiro, reciclo o regalo. Cinco, ni uno más.",
+   "Aligera"
+  ],
+  "ideas": "un bolígrafo que ya no escribe · una prenda nunca usada · un ticket viejo · una caja vacía",
+  "fill": "El objeto que más me costó dejar ir:",
+  "motto": [
+   "Cada mes, el calendario pasa la página. No deja las antiguas encima.",
+   "Veinticuatro días: haces sitio para lo que viene."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 25,
+  "source": "draft",
+  "intro": "La naturaleza está ahí, incluso en la ciudad. Basta con acercarse un poco.",
+  "task": [
+   "Miro una planta muy de cerca",
+   "un minuto, como si la viera por primera vez.",
+   "Hoja"
+  ],
+  "ideas": "los nervios de una hoja · la corteza de un árbol · una hierba entre dos adoquines",
+  "fill": "Un detalle en el que nunca me había fijado:",
+  "motto": [
+   "Los primeros calendarios eran árboles: brotes, flores, frutos y luego hojas que caen.",
+   "Veinticinco días: sigues el ritmo de las estaciones."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 26,
+  "source": "draft",
+  "intro": "Cuando todo va demasiado rápido, tu respiración puede ser tu freno. Hoy aprendes a usarla.",
+  "task": [
+   "Respiro en cuadrado",
+   "inspiro 4 tiempos, retengo 4, suelto 4, espero 4. Cuatro vueltas.",
+   "Exhala"
+  ],
+  "ideas": "antes de una reunión · en el transporte · antes de dormir",
+  "fill": "El color de mi calma hoy:",
+  "motto": [
+   "El calendario también respira: un día, una noche, un día, una noche.",
+   "Veintiséis días: tu respiración ha encontrado su propio calendario."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 27,
+  "source": "draft",
+  "intro": "Escuchar de verdad a alguien es raro. Es un regalo que puedes hacer hoy.",
+  "task": [
+   "Le hago una pregunta de verdad a alguien",
+   "y escucho la respuesta hasta el final, sin preparar la mía.",
+   "Escucha"
+  ],
+  "ideas": "«¿Qué te hizo reír esta semana?» · «¿Qué soñabas hacer de pequeño?» · «¿Cuál es tu recuerdo favorito?»",
+  "fill": "Lo que aprendí de esa persona:",
+  "motto": [
+   "En un calendario hay cumpleaños. Siempre son las casillas más valiosas.",
+   "Veintisiete días: los demás también forman parte de tus días."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 28,
+  "source": "draft",
+  "intro": "Las pequeñas alegrías se esconden bien. Hoy juegas a encontrarlas.",
+  "task": [
+   "Salgo a cazar pequeñas alegrías",
+   "tres cosas bonitas en mi día, aunque sean diminutas.",
+   "Busca"
+  ],
+  "ideas": "un rayo de sol en la pared · un café bien caliente · una sonrisa en la calle · una canción en la radio",
+  "fill": "Mi alegría más pequeña de hoy:",
+  "motto": [
+   "Una casilla del calendario parece vacía. Hasta que la miras más de cerca.",
+   "Veintiocho días: cuatro semanas volviendo, casi una vuelta completa de la luna."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 29,
+  "source": "draft",
+  "intro": "Tu móvil suena por muchas cosas que no importan. Hoy bajamos el volumen.",
+  "task": [
+   "Desactivo 3 notificaciones",
+   "o borro 3 apps que nunca abro.",
+   "Silencio"
+  ],
+  "ideas": "las alertas de un juego · las ofertas de una tienda · una app olvidada desde hace meses",
+  "fill": "Lo que hice callar, y lo que cambia:",
+  "motto": [
+   "El calendario nunca suena. Espera tranquilo a que lo mires.",
+   "Veintinueve días: menos ruido, más tú."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 30,
+  "source": "draft",
+  "intro": "Los hábitos aman los caminos conocidos. Hoy los sorprendes un poco.",
+  "task": [
+   "Tomo un camino diferente",
+   "para ir a algún sitio o para volver: otra calle, la otra acera.",
+   "Desvío"
+  ],
+  "ideas": "otra calle para volver · otro banco en el parque · otra panadería",
+  "fill": "Lo que descubrí en ese camino nuevo:",
+  "motto": [
+   "Incluso en un calendario ordenado, cada casilla puede esconder un camino nuevo.",
+   "Treinta días: un mes entero volviendo. El calendario puede pasar la página."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 31,
+  "source": "draft",
+  "intro": "Hoy nadie te pone nota. Es el momento perfecto para bailar.",
+  "task": [
+   "Bailo una canción entera",
+   "solo o acompañado, bien o mal, de principio a fin.",
+   "Baila"
+  ],
+  "ideas": "en la cocina · en el salón con cascos · con un niño · en la ducha",
+  "fill": "La canción que elegí:",
+  "motto": [
+   "El calendario tiene sus días de fiesta. Hoy es uno, si tú lo decides.",
+   "Treinta y un días: hasta los meses más largos se acaban en el 31. Tú sigues."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 32,
+  "source": "draft",
+  "intro": "Mañana será más ligero si lo preparas un poco esta noche. Bastan tres líneas.",
+  "task": [
+   "Escribo 3 cosas que hacer mañana",
+   "ni cuatro, ni diez: tres. Cortas y factibles.",
+   "Tres"
+  ],
+  "ideas": "una para mí · una para la casa · una para otra persona",
+  "fill": "La que más ganas tengo de tachar:",
+  "motto": [
+   "En el fondo, un calendario es una promesa hecha al mañana.",
+   "Treinta y dos días: empiezas a mirar un poco más lejos."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 33,
+  "source": "draft",
+  "intro": "Hoy la tarea es no hacer nada. Es más difícil de lo que parece.",
+  "task": [
+   "Me regalo 10 minutos de nada",
+   "sin tarea, sin pantalla, sin objetivo. Solo estar.",
+   "Nada"
+  ],
+  "ideas": "tumbado en el suelo · sentado al sol · una taza caliente entre las manos",
+  "fill": "En qué pensé durante esa nada:",
+  "motto": [
+   "Hay casillas vacías en el calendario. También forman parte del mes.",
+   "Treinta y tres días: descansar también es volver."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 34,
+  "source": "draft",
+  "intro": "Una palabra amable dejada en el lugar justo puede viajar muy lejos.",
+  "task": [
+   "Dejo una notita amable",
+   "en algún sitio donde alguien la encontrará.",
+   "Nota"
+  ],
+  "ideas": "un pósit en un espejo · una nota dentro de un libro · un mensaje a un compañero",
+  "fill": "Lo que escribí en mi notita:",
+  "motto": [
+   "En algunos calendarios, cada día tiene su frase. Hoy la escribes tú.",
+   "Treinta y cuatro días: mañana terminas tu escalón Basic verde."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 35,
+  "source": "draft",
+  "intro": "Dos semanas de líneas escritas. Hoy te conviertes en tu propio lector.",
+  "task": [
+   "Releo mis 14 últimas líneas",
+   "en el Diario, y elijo la que más se parece a mí.",
+   "Relee"
+  ],
+  "ideas": "la que me hace sonreír · la que me sorprende · la que me gustaría volver a vivir",
+  "fill": "La línea de estas dos semanas que me quedo:",
+  "motto": [
+   "Catorce casillas marcadas. El calendario empieza a contar tu historia.",
+   "Treinta y cinco días: bravo, te espera la pausa de reflexión."
+  ],
+  "chapter": "vert",
+  "level": "basic"
+ },
+ {
+  "n": 36,
+  "source": "draft",
+  "intro": "Empieza el escalón Medium verde. Un poco más de esfuerzo, y un poco más de diversión.",
+  "task": [
+   "Doy un paseo verde de 20 minutos",
+   "contando todo lo verde que veo por el camino.",
+   "Verde"
+  ],
+  "ideas": "las hojas · una puerta · un coche · una señal · un jersey",
+  "fill": "Mi puntuación de verde, y mi hallazgo favorito:",
+  "motto": [
+   "El capítulo verde hace honor a su nombre: aquí todo crece, despacio.",
+   "Treinta y seis días: empieza un nuevo escalón."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 37,
+  "source": "draft",
+  "intro": "Sin compras ni receta. Hoy tu nevera te lanza un reto.",
+  "task": [
+   "Cocino con lo que ya tengo",
+   "un plato sencillo, solo con la nevera y la despensa.",
+   "Cocina"
+  ],
+  "ideas": "una tortilla · pasta al limón · una sopa de sobras · una ensalada improvisada",
+  "fill": "El nombre que le doy a mi receta:",
+  "motto": [
+   "El calendario de los campesinos decía cuándo sembrar y cuándo cosechar. Hoy, cosechas tú.",
+   "Treinta y siete días: te alimentas, en todos los sentidos."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 38,
+  "source": "draft",
+  "intro": "Cada casa tiene su cajón misterioso. Hoy abres el tuyo.",
+  "task": [
+   "Ordeno un cajón entero",
+   "todo fuera, y solo vuelve lo que de verdad sirve.",
+   "Cajón"
+  ],
+  "ideas": "el cajón de los trastos · el botiquín · el cajón de los calcetines",
+  "fill": "El tesoro olvidado que encontré:",
+  "motto": [
+   "Algunos calendarios esconden una puertecita detrás de cada día. Un cajón es igual.",
+   "Treinta y ocho días: detrás de cada puertecita, un poco más de espacio."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 39,
+  "source": "draft",
+  "intro": "A tu mente le encanta lo nuevo. Hoy le regalas una palabra recién estrenada.",
+  "task": [
+   "Aprendo una palabra nueva y la uso",
+   "en mi idioma o en otro, y la meto en una frase hoy mismo.",
+   "Aprende"
+  ],
+  "ideas": "una palabra al azar del diccionario · una palabra en otro idioma · una palabra rara y bonita",
+  "fill": "Mi palabra del día, y la frase en la que la usé:",
+  "motto": [
+   "Los meses tienen nombres muy antiguos: enero por el dios Jano, marzo por el dios Marte. Las palabras también tienen historia.",
+   "Treinta y nueve días: creces una palabra."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 40,
+  "source": "draft",
+  "intro": "Tu mañana te pertenece. Hoy te la quedas solo para ti.",
+  "task": [
+   "Paso la mañana sin redes sociales",
+   "hasta el mediodía, no las abro.",
+   "Libre"
+  ],
+  "ideas": "alejar la app de la pantalla de inicio · un libro junto a la cama · la radio en su lugar",
+  "fill": "Lo que hice con mi mañana:",
+  "motto": [
+   "Antes de las pantallas, se miraba el calendario de la pared. Una vez al día, y bastaba.",
+   "Cuarenta días: recuperas tus mañanas."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 41,
+  "source": "draft",
+  "intro": "Un mensaje se lee. Una voz se siente. Hoy llamamos.",
+  "task": [
+   "Llamo a alguien en vez de escribir",
+   "diez minutos, una conversación de verdad, una voz de verdad.",
+   "Llama"
+  ],
+  "ideas": "un abuelo o una abuela · un amigo lejano · un hermano o una hermana · una antigua compañera",
+  "fill": "El momento de la llamada que me hizo bien:",
+  "motto": [
+   "Una voz al teléfono es una casilla del calendario que se llena de calor.",
+   "Cuarenta y un días: los lazos también se cultivan día a día."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 42,
+  "source": "draft",
+  "intro": "Siete movimientos, siete minutos. A tu cuerpo le va a encantar este juego.",
+  "task": [
+   "Hago 7 minutos de fuerza",
+   "7 movimientos, 1 minuto cada uno, a mi nivel.",
+   "Fuerza"
+  ],
+  "ideas": "sentadillas · flexiones contra la pared · plancha de rodillas · rodillas arriba · zancadas",
+  "fill": "El movimiento que repetiría mañana, solo por gusto:",
+  "motto": [
+   "Desde los babilonios, la semana tiene 7 días. Hoy, un minuto para cada uno.",
+   "Cuarenta y dos días: seis semanas. Tu cuerpo lo sabe."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 43,
+  "source": "draft",
+  "intro": "El sol sale y se pone cada día, lo miremos o no. Hoy lo miras.",
+  "task": [
+   "Miro un amanecer o un atardecer",
+   "de principio a fin, sin hacerle fotos.",
+   "Luz"
+  ],
+  "ideas": "en la ventana · en un balcón · al final de la calle · en un parque",
+  "fill": "Los colores que vi:",
+  "motto": [
+   "El calendario sigue el camino del sol desde hace milenios. Esta tarde, síguelo tú también.",
+   "Cuarenta y tres días: el mundo tiene sus citas, y tú también."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 44,
+  "source": "draft",
+  "intro": "Hoy te conviertes en fotógrafo de un solo color.",
+  "task": [
+   "Hago 5 fotos de un solo color",
+   "elijo un color por la mañana y lo persigo todo el día.",
+   "Color"
+  ],
+  "ideas": "todo amarillo · todo rojo · todo azul",
+  "fill": "El color que elegí, y por qué:",
+  "motto": [
+   "Cada mes tiene su color: el blanco de enero, el verde de abril, el oro de octubre.",
+   "Cuarenta y cuatro días: tu día tiene sus colores."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 45,
+  "source": "draft",
+  "intro": "Una agenda no es solo para las obligaciones. Hoy apuntas en ella una alegría.",
+  "task": [
+   "Programo una alegría en mi agenda",
+   "un pequeño placer, con fecha y hora, como una cita de verdad.",
+   "Alegría"
+  ],
+  "ideas": "un pícnic el domingo · una peli el jueves por la noche · un café con alguien · una hora de lectura en la cama",
+  "fill": "Mi alegría programada, y su fecha:",
+  "motto": [
+   "Un calendario no sirve solo para apuntar lo que hay que hacer. También sirve para esperar las cosas bonitas.",
+   "Cuarenta y cinco días: la mitad de los 90. Tómate un segundo para sentirlo."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 46,
+  "source": "draft",
+  "intro": "Tu cabeza está llena de cositas que se agitan. Hoy las pones sobre el papel.",
+  "task": [
+   "Vacío mi cabeza durante 10 minutos",
+   "escribo todo lo que me pesa, sin orden, sin clasificar.",
+   "Vacía"
+  ],
+  "ideas": "las cosas pendientes · las pequeñas preocupaciones · las ideas sueltas",
+  "fill": "Mi cabeza antes y después, en dos palabras:",
+  "motto": [
+   "Un calendario lleno puede seguir siendo ligero, si cada cosa tiene su casilla.",
+   "Cuarenta y seis días: una cabeza ordenada, un día más claro."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 47,
+  "source": "draft",
+  "intro": "Echar una mano sin que te lo pidan es una pequeña magia de cada día.",
+  "task": [
+   "Hago un favor sorpresa",
+   "algo útil para alguien, sin esperar un gracias.",
+   "Ayuda"
+  ],
+  "ideas": "llevar la compra · sacar la basura del vecino · fregar los platos de alguien · ceder el paso",
+  "fill": "Lo que sentí al ayudar:",
+  "motto": [
+   "Los días festivos son regalos del calendario. Tú también puedes regalar uno pequeño.",
+   "Cuarenta y siete días: tu constancia hace bien a tu alrededor."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 48,
+  "source": "draft",
+  "intro": "Incluso después de 47 días, hay cosas que nunca has hecho. Hoy, solo una.",
+  "task": [
+   "Hago algo por primera vez",
+   "pequeño, pero de verdad nuevo para mí.",
+   "Primera"
+  ],
+  "ideas": "probar una fruta desconocida · escribir con la otra mano · escuchar una música que nunca oí · entrar en una tienda en la que nunca estuve",
+  "fill": "Mi primera vez de hoy:",
+  "motto": [
+   "Cada 1 de enero, el calendario vuelve a empezar. Cada día puede tener su pequeño 1 de enero.",
+   "Cuarenta y ocho días: no te aburres por el camino."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 49,
+  "source": "draft",
+  "intro": "Fin del escalón Medium verde. Hoy repites tu gesto favorito, un poco mejor.",
+  "task": [
+   "Repito mi gesto favorito de estos 14 días",
+   "llevándolo solo un poquito más lejos.",
+   "Otra vez"
+  ],
+  "ideas": "un paseo verde más largo · un segundo cajón · una llamada más · una alegría más en la agenda",
+  "fill": "Por qué este gesto me va tan bien:",
+  "motto": [
+   "Cuarenta y nueve días, siete semanas. El calendario parece conocerte bien.",
+   "Bravo: te espera la pausa de reflexión."
+  ],
+  "chapter": "vert",
+  "level": "medium"
+ },
+ {
+  "n": 50,
+  "source": "draft",
+  "intro": "Empieza el escalón Intense verde. Y empieza temprano, con un regalo: tiempo.",
+  "task": [
+   "Me levanto 15 minutos antes, para mí",
+   "y guardo esos 15 minutos para algo que me sienta bien.",
+   "Alba"
+  ],
+  "ideas": "leer · estirarme · tomar el café fuera · escribir",
+  "fill": "Lo que hice con mis 15 minutos:",
+  "motto": [
+   "Los antiguos marcaban en sus calendarios los días en que el sol salía antes. Hoy, tú también.",
+   "Cincuenta días: la cifra te sienta bien."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 51,
+  "source": "draft",
+  "intro": "Treinta minutos de movimiento. A tope o muy suave, tú decides la intensidad.",
+  "task": [
+   "Me muevo 30 minutos",
+   "caminar rápido, bici, nadar, bailar: da igual, mientras me mueva.",
+   "Muévete"
+  ],
+  "ideas": "caminar rápido · bici · natación · una clase online",
+  "fill": "Mi energía después, en una palabra:",
+  "motto": [
+   "El calendario nunca retrocede una casilla. Tu cuerpo tampoco olvida lo que le das.",
+   "Cincuenta y un días: avanzas, de verdad."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 52,
+  "source": "draft",
+  "intro": "Cuatro horas sin móvil. ¿Da miedo? Justo por eso es interesante.",
+  "task": [
+   "Paso medio día sin móvil",
+   "4 horas, apagado o guardado en un cajón.",
+   "Desconecta"
+  ],
+  "ideas": "avisar a mis seres queridos · un reloj en su lugar · una actividad al aire libre",
+  "fill": "El momento en que quise cogerlo, y lo que hice en su lugar:",
+  "motto": [
+   "Durante siglos, el calendario fue de papel. El tiempo pasaba igual de bien.",
+   "Cincuenta y dos días: recuperas tu tiempo."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 53,
+  "source": "draft",
+  "intro": "Hay un pequeño asunto que lleva tiempo por ahí. Hoy desaparece.",
+  "task": [
+   "Resuelvo un asunto pendiente",
+   "papeleo, cita, reparación: lo termino hoy.",
+   "Resuelve"
+  ],
+  "ideas": "una cita médica · una reparación · un trámite online · un reembolso",
+  "fill": "El alivio de haber terminado, en una imagen:",
+  "motto": [
+   "Una casilla tachada en el calendario es un pequeño peso menos.",
+   "Cincuenta y tres días: una cosa menos sobre tus hombros."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 54,
+  "source": "draft",
+  "intro": "Los mejores momentos se viven a menudo en compañía. Hoy invitas tú.",
+  "task": [
+   "Invito a alguien a compartir un momento",
+   "una comida, un paseo, un café, un juego.",
+   "Comparte"
+  ],
+  "ideas": "una comida sencilla · un paseo · un café · un juego de mesa",
+  "fill": "Lo mejor de ese momento compartido:",
+  "motto": [
+   "Las fiestas del calendario existen por una sola razón: reencontrarse.",
+   "Cincuenta y cuatro días: juntos somos más fuertes."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 55,
+  "source": "draft",
+  "intro": "Hoy el ejercicio más intenso quizá sea quedarte sentado sin hacer nada.",
+  "task": [
+   "Medito 10 minutos",
+   "con los ojos cerrados, cuento mis respiraciones hasta 10 y vuelvo a empezar.",
+   "Calma"
+  ],
+  "ideas": "con un temporizador · con una meditación guiada · escuchando la lluvia",
+  "fill": "Adónde se fue mi mente, y cómo la traje de vuelta:",
+  "motto": [
+   "Entre dos casillas del calendario siempre hay una noche. La calma también hace avanzar.",
+   "Cincuenta y cinco días: aprendes a parar."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 56,
+  "source": "draft",
+  "intro": "Una habitación, una playlist, una hora. Hoy la limpieza se convierte en concierto.",
+  "task": [
+   "Hago brillar una habitación entera",
+   "una hora, una playlist, una sola habitación.",
+   "Brilla"
+  ],
+  "ideas": "el baño · la cocina · la entrada · mi dormitorio",
+  "fill": "La canción que más me ayudó:",
+  "motto": [
+   "En primavera, el calendario invita a la gran limpieza. En tu casa, la primavera es hoy.",
+   "Cincuenta y seis días: ocho semanas. Tu espacio ha cambiado contigo."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 57,
+  "source": "draft",
+  "intro": "Tus manos saben hacer muchas cosas que tu cabeza ha olvidado. Hoy les dejas el sitio.",
+  "task": [
+   "Fabrico algo con mis manos",
+   "un objeto, un plato, una reparación, una plantación.",
+   "Fabrica"
+  ],
+  "ideas": "un dibujo para regalar · un plato nuevo · arreglar un objeto · plantar una semilla",
+  "fill": "Lo que fabriqué, y para quién:",
+  "motto": [
+   "Antes de imprimirse, los calendarios se pintaban y se grababan a mano.",
+   "Cincuenta y siete días: tus manos recuerdan."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 58,
+  "source": "draft",
+  "intro": "Alguien te ayudó un día, quizá sin saberlo. Hoy se lo dices.",
+  "task": [
+   "Escribo una carta de agradecimiento",
+   "a alguien que fue importante. Luego elijo si la envío.",
+   "Carta"
+  ],
+  "ideas": "un antiguo profesor · un amigo fiel · mi madre o mi padre · alguien con quien me crucé una sola vez",
+  "fill": "La frase de mi carta que más me gusta:",
+  "motto": [
+   "Algunas fechas quedan grabadas para siempre. El día en que alguien te tendió la mano es una de ellas.",
+   "Cincuenta y ocho días: miras de dónde vienes."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 59,
+  "source": "draft",
+  "intro": "Hoy tu techo es el cielo.",
+  "task": [
+   "Paso una hora al aire libre",
+   "caminando, sentado, leyendo: con tal de que sea bajo el cielo.",
+   "Fuera"
+  ],
+  "ideas": "un parque · un bosque · la orilla del agua · un banco al sol",
+  "fill": "El sonido de fuera que me llevo:",
+  "motto": [
+   "El calendario sigue las estaciones. Hoy vas a verlas de verdad.",
+   "Cincuenta y nueve días: la naturaleza también vuelve cada año."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 60,
+  "source": "draft",
+  "intro": "Dos meses. Suficiente distancia para mirar la próxima semana desde un poco más arriba.",
+  "task": [
+   "Planifico la semana que viene",
+   "3 prioridades, un momento para mí, una alegría.",
+   "Planifica"
+  ],
+  "ideas": "en un cuaderno · en la agenda del móvil · en una hoja en la nevera",
+  "fill": "Mi prioridad número uno:",
+  "motto": [
+   "El calendario muestra todo el mes de un vistazo. Toma un poco de altura tú también.",
+   "Sesenta días: dos meses. Ahí es nada."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 61,
+  "source": "draft",
+  "intro": "Veinticuatro horas, un reto. Tú eliges cuál, y descubres de qué eres capaz.",
+  "task": [
+   "Acepto un reto de 24 horas",
+   "elijo un reto y lo mantengo hasta mañana a la misma hora.",
+   "Reto"
+  ],
+  "ideas": "nada de azúcar añadido · ni una sola queja · ninguna compra · solo agua para beber",
+  "fill": "Mi reto, y el momento más difícil:",
+  "motto": [
+   "El 29 de febrero solo llega cada cuatro años. Los días raros tienen un sabor especial.",
+   "Sesenta y un días: descubres que puedes."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 62,
+  "source": "draft",
+  "intro": "Decir no a una cosa es decir sí a otra. A menudo, a ti.",
+  "task": [
+   "Digo no a algo, con amabilidad",
+   "sin justificarme durante diez minutos. Un no sencillo y suave.",
+   "No"
+  ],
+  "ideas": "una petición de más · una noche que me agota · una tarea que no es mía",
+  "fill": "A qué le dijo sí mi no:",
+  "motto": [
+   "Un calendario demasiado lleno ya no tiene sitio para ti. Guárdate algunas casillas libres.",
+   "Sesenta y dos días: proteger tu tiempo también es volver a ti."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 63,
+  "source": "draft",
+  "intro": "Último día verde. Hoy cosechas todo lo que has sembrado en 42 días.",
+  "task": [
+   "Vivo un día verde completo",
+   "mañana, tarde y noche: un gesto verde en cada una, elegido entre mis 42 días.",
+   "Cosecha"
+  ],
+  "ideas": "mañana: 15 minutos de alba · tarde: un paseo verde · noche: una alegría programada",
+  "fill": "Lo que el capítulo verde hizo crecer en mí:",
+  "motto": [
+   "En 1582 se quitaron diez días del calendario de golpe. El mundo siguió. Un día perdido no borra nada.",
+   "Capítulo verde terminado: cuarenta y dos días más. Bravo."
+  ],
+  "chapter": "vert",
+  "level": "intense"
+ },
+ {
+  "n": 64,
+  "source": "draft",
+  "intro": "Bienvenido al capítulo naranja. Aquí tus gestos se convierten en engranajes que se mueven unos a otros.",
+  "task": [
+   "Engancho un gesto nuevo a un hábito",
+   "«Después de esto, hago aquello»: un gesto diminuto enganchado a uno que ya hago.",
+   "Engranaje"
+  ],
+  "ideas": "después del café, 5 sentadillas · después de lavarme los dientes, un agradecimiento · al llegar a casa, 2 minutos de orden",
+  "fill": "Mi engranaje de hoy, «después de esto, hago aquello»:",
+  "motto": [
+   "En un reloj, ninguna rueda gira sola. Cada una mueve a la siguiente.",
+   "Sesenta y cuatro días: empieza el capítulo naranja. Los engranajes se colocan en su sitio."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 65,
+  "source": "draft",
+  "intro": "Las escaleras son un gimnasio gratis, abierto a todas horas.",
+  "task": [
+   "Subo escaleras durante 5 minutos",
+   "a mi ritmo, agarrándome a la barandilla si hace falta.",
+   "Sube"
+  ],
+  "ideas": "las de mi edificio · las del trabajo · las del metro · una pequeña colina",
+  "fill": "Cuántos escalones, más o menos:",
+  "motto": [
+   "En los relojes antiguos, una pesa baja muy despacio para mover las agujas. El esfuerzo se vuelve movimiento.",
+   "Sesenta y cinco días: cada escalón cuenta."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 66,
+  "source": "draft",
+  "intro": "La curiosidad es el aceite que hace girar los engranajes de la cabeza.",
+  "task": [
+   "Escucho 20 minutos de algo que me enseña",
+   "un tema del que no sé nada.",
+   "Descubre"
+  ],
+  "ideas": "un pódcast de historia · una conferencia · un documental · un audiolibro",
+  "fill": "Lo más sorprendente que aprendí:",
+  "motto": [
+   "Los primeros relojes mecánicos los construyeron monjes curiosos, hace más de 700 años.",
+   "Sesenta y seis días: tu mente tiene sus propios engranajes."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 67,
+  "source": "draft",
+  "intro": "Todos necesitamos un lugar propio, aunque sea diminuto. Hoy creas el tuyo.",
+  "task": [
+   "Creo mi rincón refugio",
+   "una silla, una luz, un objeto querido: mi refugio de un metro cuadrado.",
+   "Rincón"
+  ],
+  "ideas": "un sillón junto a la ventana · un cojín y una vela · una planta y un libro",
+  "fill": "El nombre que le doy a mi rincón:",
+  "motto": [
+   "En las casas antiguas, el reloj tenía su lugar, y toda la habitación se organizaba a su alrededor.",
+   "Sesenta y siete días: te haces un sitio."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 68,
+  "source": "draft",
+  "intro": "Tu móvil es una herramienta. Hoy lo ordenas para que te sirva a ti, y no al revés.",
+  "task": [
+   "Hago limpieza en mi móvil",
+   "15 minutos: pantalla de inicio, fotos, apps.",
+   "Limpia"
+  ],
+  "ideas": "borrar 20 fotos borrosas · un fondo de pantalla tranquilo · solo las apps útiles en el inicio",
+  "fill": "Lo que mi pantalla de inicio dice de mí ahora:",
+  "motto": [
+   "Un reloj bien ajustado no hace ningún ruido inútil. Solo su tictac.",
+   "Sesenta y ocho días: menos pantalla, más tiempo."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 69,
+  "source": "draft",
+  "intro": "Un cumplido vago se olvida. Un cumplido preciso se guarda durante años.",
+  "task": [
+   "Hago un cumplido preciso",
+   "no un «está bien»: un detalle real que he notado.",
+   "Bravo"
+  ],
+  "ideas": "su forma de escuchar · una idea en una reunión · un plato que le salió rico · su risa",
+  "fill": "El cumplido que hice, palabra por palabra:",
+  "motto": [
+   "Un relojero se fija en las piezas más pequeñas. Son ellas las que hacen que todo funcione.",
+   "Sesenta y nueve días: ves lo bonito de los demás."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 70,
+  "source": "draft",
+  "intro": "El mundo va deprisa. Hoy, durante una hora, tú vas más despacio que él.",
+  "task": [
+   "Lo hago todo a cámara lenta durante una hora",
+   "comer, caminar, ordenar: la mitad de rápido, el doble de presente.",
+   "Lento"
+  ],
+  "ideas": "una comida lenta · una ducha lenta · un paseo a pasitos · fregar sin prisa",
+  "fill": "Lo que la lentitud me hizo notar:",
+  "motto": [
+   "El péndulo nunca tiene prisa. Por eso se puede confiar en él.",
+   "Setenta días: has encontrado tu propio tempo."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 71,
+  "source": "draft",
+  "intro": "Tres líneas, una imagen, un instante. Hoy eres poeta.",
+  "task": [
+   "Escribo un haiku",
+   "tres líneas cortas: una estación, una imagen, un instante.",
+   "Poema"
+  ],
+  "ideas": "la lluvia en el cristal · mi café de la mañana · el ruido de la ciudad · una hoja que cae",
+  "fill": "Mi haiku del día:",
+  "motto": [
+   "Tic, tac, tic. Tres sonidos le bastan al reloj para decir el tiempo que pasa.",
+   "Setenta y un días: pones palabras a tus días."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 72,
+  "source": "draft",
+  "intro": "Mirar tu dinero no es juzgarte. Es solo encender la luz.",
+  "task": [
+   "Miro mis gastos de la semana",
+   "10 minutos, sin juzgarme. Solo ver.",
+   "Cuenta"
+  ],
+  "ideas": "mis extractos · mis tickets · una app de presupuesto",
+  "fill": "Un gasto que me hizo feliz de verdad:",
+  "motto": [
+   "El reloj cuenta los segundos sin enfadarse nunca. Cuenta con la misma dulzura.",
+   "Setenta y dos días: miras tu vida de frente, con calma."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 73,
+  "source": "draft",
+  "intro": "El sueño es tu muelle. Esta noche le das un poco más de cuerda.",
+  "task": [
+   "Me acuesto 30 minutos antes",
+   "esta noche lo dejo todo y me regalo media hora más de sueño.",
+   "Duerme"
+  ],
+  "ideas": "una infusión · un cuarto fresco · luz suave · el móvil fuera del dormitorio",
+  "fill": "Lo que preparo para dormir bien esta noche:",
+  "motto": [
+   "Hasta el reloj más bonito se para si olvidas darle cuerda.",
+   "Setenta y tres días: cuidas de tu mecanismo."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 74,
+  "source": "draft",
+  "intro": "Dar no vacía. Curiosamente, llena.",
+  "task": [
+   "Doy algo",
+   "un objeto, un poco de dinero, o mejor aún, un poco de mi tiempo.",
+   "Da"
+  ],
+  "ideas": "ropa a una asociación · ayudar a un vecino · donar sangre · una hora de voluntariado",
+  "fill": "Lo que di, y lo que recibí a cambio:",
+  "motto": [
+   "Una rueda que transmite su movimiento no lo pierde. Mantiene vivo todo el reloj.",
+   "Setenta y cuatro días: haces girar algo más grande que tú."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 75,
+  "source": "draft",
+  "intro": "Dentro de ti hay un niño que adoraba algo. Hoy le haces una visita.",
+  "task": [
+   "Recupero un placer de la infancia",
+   "20 minutos de un juego o una actividad que me encantaba de pequeño.",
+   "Juega"
+  ],
+  "ideas": "dibujar · un puzle · montar en bici · un juego de cartas · aviones de papel",
+  "fill": "Lo que me habría dicho el niño que fui:",
+  "motto": [
+   "Algunos relojes tienen un cuco que sale solo para hacerte sonreír. Deja salir el tuyo.",
+   "Setenta y cinco días: la ligereza también es una fuerza."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 76,
+  "source": "draft",
+  "intro": "Hoy te conviertes en la buena sorpresa del día de alguien.",
+  "task": [
+   "Le doy una sorpresa a alguien",
+   "pequeña, inesperada, solo por el gusto de hacerlo.",
+   "Sorpresa"
+  ],
+  "ideas": "un desayuno preparado · una flor · un audio cantado · un postre",
+  "fill": "Su cara en el momento de la sorpresa:",
+  "motto": [
+   "El reloj suena a la hora en punto. Una sorpresa suena cuando menos te lo esperas.",
+   "Setenta y seis días: pones alegría en el mecanismo."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 77,
+  "source": "draft",
+  "intro": "Fin del escalón Medium naranja. Hoy eliges los engranajes que mejor giran juntos.",
+  "task": [
+   "Elijo mis 3 engranajes",
+   "de todos mis gestos, los 3 que mejor encajan juntos, y los hago hoy.",
+   "Elige"
+  ],
+  "ideas": "uno para el cuerpo · uno para la mente · uno para los demás",
+  "fill": "Mis 3 engranajes:",
+  "motto": [
+   "Un reloj bien ajustado puede funcionar durante siglos. Tus tres engranajes también.",
+   "Setenta y siete días: bravo, te espera la pausa de reflexión."
+  ],
+  "chapter": "orange",
+  "level": "medium"
+ },
+ {
+  "n": 78,
+  "source": "draft",
+  "intro": "Último escalón: Más complejo. Ya no solo sigues el cuaderno, empiezas a diseñar tus propios días.",
+  "task": [
+   "Dibujo mi día ideal, hora por hora",
+   "de despertarme a acostarme. Luego vivo al menos una hora de él hoy.",
+   "Ideal"
+  ],
+  "ideas": "la hora de despertarme · el momento para mí · el momento para los demás · la hora de dormir",
+  "fill": "La hora ideal que viví hoy:",
+  "motto": [
+   "El relojero dibuja cada pieza antes de fabricarla. Tu día merece un plan.",
+   "Setenta y ocho días: empieza el último escalón. Estás listo."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 79,
+  "source": "draft",
+  "intro": "Tres movimientos que se encadenan como engranajes. Hoy toca tu rutina corporal completa.",
+  "task": [
+   "Hago mi rutina corporal de 20 minutos",
+   "5 minutos de estiramientos, 10 de caminar rápido, 5 de fuerza.",
+   "Cuerpo"
+  ],
+  "ideas": "estiramientos · caminar rápido · sentadillas · plancha",
+  "fill": "La parte de mi rutina que más me gustó:",
+  "motto": [
+   "Muelle, rueda, péndulo: tres piezas, un solo movimiento.",
+   "Setenta y nueve días: tu cuerpo se convierte en un bonito mecanismo."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 80,
+  "source": "draft",
+  "intro": "Algunos lazos se han desgastado un poco. Hoy solo entreabres la puerta, sin forzar.",
+  "task": [
+   "Doy un paso hacia un lazo desgastado",
+   "un mensaje a alguien de quien me he alejado, si me hace bien.",
+   "Repara"
+  ],
+  "ideas": "«Pienso en ti» · una disculpa sencilla · un recuerdo compartido",
+  "fill": "Lo que me atreví a escribir:",
+  "motto": [
+   "Un reloj parado siempre puede volver a andar. Basta con un relojero paciente.",
+   "Ochenta días: tienes un gran corazón."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 81,
+  "source": "draft",
+  "intro": "Dentro de un año estarás un año más lejos de todos modos. Mejor llegar con algo nuevo.",
+  "task": [
+   "Doy mi primera clase",
+   "20 minutos para una habilidad que quiero tener dentro de un año.",
+   "Empieza"
+  ],
+  "ideas": "un idioma · un instrumento · programar · coser · un plato de otro país",
+  "fill": "Dentro de un año sabré:",
+  "motto": [
+   "Hicieron falta siglos para inventar un reloj preciso. Una lección al día ya es mucho.",
+   "Ochenta y un días: siembras para más adelante."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 82,
+  "source": "draft",
+  "intro": "Un día entero sin redes sociales. El mundo girará sin ti, y tú girarás mejor.",
+  "task": [
+   "Paso un día entero sin redes sociales",
+   "24 horas, apps ocultas o borradas durante el día.",
+   "Offline"
+  ],
+  "ideas": "avisar a mis seres queridos · un cuaderno para apuntar lo que quería compartir · una salida planeada",
+  "fill": "Lo que habría publicado, y lo que viví en su lugar:",
+  "motto": [
+   "Antiguamente, el reloj del campanario daba la hora a todo un pueblo. Bastaba para vivir juntos.",
+   "Ochenta y dos días: recuperas un día entero."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 83,
+  "source": "draft",
+  "intro": "Ya ordenaste un cajón, luego una habitación. Hoy ordenas toda una categoría.",
+  "task": [
+   "Depuro una categoría entera",
+   "toda mi ropa, o todos mis libros, o todos mis cables: me quedo con lo que de verdad me gusta.",
+   "Depura"
+  ],
+  "ideas": "la ropa · los libros · los papeles · los cables",
+  "fill": "Lo que me quedo, y por qué me gusta:",
+  "motto": [
+   "Un reloj no tiene ninguna pieza de sobra. Cada rueda tiene su razón de ser.",
+   "Ochenta y tres días: te quedas con lo esencial."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 84,
+  "source": "draft",
+  "intro": "Doce semanas de camino. Es hora de poner lo que has aprendido en una sola frase.",
+  "task": [
+   "Escribo mi lema",
+   "una frase corta que me guiará, para llevar conmigo.",
+   "Lema"
+  ],
+  "ideas": "«Volver, siempre» · «Poco, pero cada día» · «Despacio, pero seguro»",
+  "fill": "Mi lema:",
+  "motto": [
+   "En algunos relojes antiguos se grababa un lema. El tuyo también merece estar grabado.",
+   "Ochenta y cuatro días: doce semanas. Sabes en quién te estás convirtiendo."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 85,
+  "source": "draft",
+  "intro": "Hay un proyecto que te espera desde hace mucho. Hoy le das una hora entera.",
+  "task": [
+   "Le doy una hora a un proyecto que me importa",
+   "una hora sin interrupciones, móvil lejos, puerta cerrada.",
+   "Proyecto"
+  ],
+  "ideas": "escribir · un huerto · un álbum de fotos · un viaje que preparar · una web",
+  "fill": "Mi proyecto en una frase, como una promesa:",
+  "motto": [
+   "Algunos relojeros pasaron toda su vida con un solo reloj. Las grandes cosas aman la paciencia.",
+   "Ochenta y cinco días: solo quedan cinco. Tu propio mecanismo gira solo."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 86,
+  "source": "draft",
+  "intro": "Has hecho mucho más de lo que crees. Hoy lo demuestras por escrito.",
+  "task": [
+   "Escribo 20 cosas que he logrado",
+   "desde el día 1, o desde siempre. Las pequeñas cuentan doble.",
+   "Orgullo"
+  ],
+  "ideas": "un cajón ordenado · una llamada hecha · una mañana sin móvil · volver después de un día perdido",
+  "fill": "El logro del que estoy más orgulloso u orgullosa:",
+  "motto": [
+   "Cada tictac es una pequeña victoria sobre el tiempo. Has acumulado millones.",
+   "Ochenta y seis días: mira todo lo que has hecho."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 87,
+  "source": "draft",
+  "intro": "Un hábito compartido aguanta el doble. Hoy te llevas a alguien contigo.",
+  "task": [
+   "Me llevo a alguien conmigo",
+   "le propongo a alguien hacer un gesto juntos cada día, durante una semana.",
+   "Juntos"
+  ],
+  "ideas": "caminar juntos · mandarnos un agradecimiento cada noche · cocinar juntos los domingos",
+  "fill": "La persona que me llevo, y nuestro gesto:",
+  "motto": [
+   "En 1665, Huygens notó que dos relojes colgados uno al lado del otro acababan latiendo a la vez.",
+   "Ochenta y siete días: tu constancia se vuelve contagiosa."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 88,
+  "source": "draft",
+  "intro": "El día 90 no es un final. Hoy preparas lo que viene.",
+  "task": [
+   "Preparo mis 30 días de después",
+   "qué gestos me quedo, cuándo los hago y qué me los recordará.",
+   "Después"
+  ],
+  "ideas": "3 gestos cada día · 1 gran gesto a la semana · un recordatorio en el móvil · un calendario en la nevera",
+  "fill": "El gesto que me quedo para siempre:",
+  "motto": [
+   "Un reloj no se para a medianoche. Simplemente empieza una vuelta nueva.",
+   "Ochenta y ocho días: ya miras más lejos."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 89,
+  "source": "draft",
+  "intro": "Penúltimo día. Hoy recorres todo tu camino en un solo día.",
+  "task": [
+   "Vivo un día de todo mi recorrido",
+   "un gesto azul, uno verde, uno naranja: del más sencillo al más complejo.",
+   "Todo"
+  ],
+  "ideas": "azul: buscar mi sombra · verde: una alegría programada · naranja: una hora lenta",
+  "fill": "El gesto que más ha cambiado desde el principio:",
+  "motto": [
+   "Un reloj no enseña todas sus ruedas. Pero cada una ha trabajado para llegar hasta aquí.",
+   "Ochenta y nueve días: mañana, el último."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ },
+ {
+  "n": 90,
+  "source": "draft",
+  "intro": "Día 90. Hoy vuelves a donde todo empezó, para ver todo el camino.",
+  "task": [
+   "Repito mi día 1",
+   "los mismos pequeños gestos, y releo mi primerísima línea.",
+   "Vuelve"
+  ],
+  "ideas": "el mismo vaso de agua · la misma pequeña tarea · releer mi primera línea en el Diario",
+  "fill": "Lo que le diría a mi yo del día 1:",
+  "motto": [
+   "La sombra, las páginas, los engranajes: todo te ha traído hasta aquí.",
+   "Noventa días. Has vuelto, una y otra vez. El violeta te espera."
+  ],
+  "chapter": "orange",
+  "level": "complexe"
+ }
+]

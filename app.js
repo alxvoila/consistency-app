@@ -10,13 +10,12 @@ if(!S)S=fresh();
 // ---------- i18n ----------
 const LANGS=['en','fr','es','zh','pt'];
 const detectLang=()=>{for(const x of (navigator.languages||[navigator.language||'en'])){const c=String(x).toLowerCase().slice(0,2);if(LANGS.includes(c))return c}return 'en'};
-let L=I18N.en,CHAPTERS=[],DAYS=[],FEEL=[],ENERGY=[],REFLECTION_Q=[],BILAN_Q=[],SYNTH_Q=[];
+let L=I18N.en,CHAPTERS=[],DAYS=[],FEEL=[],ENERGY=[];
 const fill=(str,v)=>String(str).replace(/\{(\w+)\}/g,(m,x)=>v&&v[x]!=null?v[x]:m);
 const t=(k,v)=>fill(L.ui[k]??I18N.en.ui[k]??k,v);
-function buildData(){const ph=L.ph;FEEL=L.feel;ENERGY=L.energy;REFLECTION_Q=L.refl;BILAN_Q=L.bilan;SYNTH_Q=L.synth;
+function buildData(){FEEL=L.feel;ENERGY=L.energy;
  CHAPTERS=CHAPTER_DEFS.map(d=>Object.assign({},d,L.chapters[d.id],{levels:d.levels.map(([id,a,b])=>[id,L.levels[id],a,b])}));
- DAYS=Array.from({length:90},(_,i)=>{const n=i+1;if(n<=7)return Object.assign({n,placeholder:false},L.days[i]);
-  return {n,placeholder:true,intro:fill(ph.intro,{n}),task:ph.tasks[PH_SCHEDULE[n]],ideas:'',fill:ph.fill,motto:ph.motto.map(m=>fill(m,{n}))}})}
+ DAYS=Array.from({length:90},(_,i)=>Object.assign({n:i+1},L.days[i]))}
 function setLang(code){if(!I18N[code])code='en';S.lang=code;L=I18N[code];buildData();
  document.documentElement.lang={zh:'zh-CN',pt:'pt-BR'}[code]||code;document.body.classList.toggle('cjk',!!L.cjk);
  if(L.cjk&&!document.getElementById('cjkfont')){const k=document.createElement('link');k.id='cjkfont';k.rel='stylesheet';k.href='https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;600&family=Noto+Serif+SC:wght@400;700;900&display=swap';document.head.appendChild(k)}
@@ -155,7 +154,7 @@ function home(){setTheme('w');const nd=nextDay(),dc=doneCount(),p=pendingPause()
  let h=`<div class="page"><section class="blk w"><p class="sc">${t('hello',{name:esc(S.profile.name)})}</p><h1 class="huge">${dc}<span class="serif" style="font-size:.32em;font-weight:400;letter-spacing:0"> / 90</span></h1>
   <p class="small">${t('days_done')}</p><div class="bar"><i style="width:${dc/90*100}%"></i></div>${cta}${missedCard()}</section>`;
  CHAPTERS.forEach((c,i)=>{const th=i%2?'w':'b';h+=`<section class="blk ${th}"><p class="sc">${t('chapter_n',{n:i+1,obj:esc(c.obj)})}</p><h2 class="big">${esc(c.short)}</h2><p class="small">${esc(c.desc)}</p>`;
-  c.levels.forEach(l=>{h+=`<div class="lvl sc"><span>${l[1]}</span><span>${l[2]}–${l[3]}${S.reflections[c.id+'-'+l[0]]?t('pause_done'):''}</span></div><div class="grid">`+range(l[2],l[3]).map(n=>{const d=S.days[n],done=d?.done,open=done||(n===nd&&!p);
+  c.levels.forEach(l=>{h+=`<div class="lvl sc"><span>${l[1]}</span><span>${l[2]}-${l[3]}${S.reflections[c.id+'-'+l[0]]?t('pause_done'):''}</span></div><div class="grid">`+range(l[2],l[3]).map(n=>{const d=S.days[n],done=d?.done,open=done||(n===nd&&!p);
    return `<button class="d ${done?'done':''} ${!done&&jk.has(n)&&n!==nd?'jk':''} ${open?'':'lock'} ${n===nd&&!p?'cur':''}" ${open?`onclick="go('day',${n})"`:'disabled'} aria-label="${t('day_n',{n})}">${n}</button>`}).join('')+'</div>'});
   if(c.id==='violet')h+=`<p class="lead" style="margin-top:20px">${t('violet_list')}</p>${nd>90&&!p?`<button class="btn" style="margin-top:16px" onclick="go('final')">${t('open')}</button>`:`<p class="sc muted" style="margin-top:14px">${t('unlocks')}</p>`}`;
   h+='</section>'});
@@ -169,11 +168,10 @@ function dayView(n){const D=DAYS[n-1];if(!D)return home();const {c,l}=levelOf(n)
  const s=Object.assign({checks:[false,false,false],wake:'',fill:'',line:'',mood:50,energy:50},S.days[n]||{});
  if(typeof s.mood!=='number')s.mood=moodNum(s.mood)??50;
  const draft=()=>{S.days[n]=s;save()};
- const ph=D.placeholder?`<span class="ph">${t('ph_badge')}</span>`:'';
  const tag=x=>`<p class="sc">${t('d_tag',{n,x})}</p>`;
  const word=D.task[2]||D.task[0];
  stepper([
-  {t:'w',h:()=>`${tag(esc(c.name)+' · '+l[1])}${ph}<h1 class="huge">${t('d_huge',{n})}</h1><p class="lead">${esc(D.intro)}</p>`,cta:t('begin')},
+  {t:'w',h:()=>`${tag(esc(c.name)+' · '+l[1])}<h1 class="huge">${t('d_huge',{n})}</h1><p class="lead">${esc(D.intro)}</p>`,cta:t('begin')},
   {t:'w',h:()=>`${tag(t('d_morning'))}<h2 class="q">${t('d_energy_q')}</h2>${slider(s.energy,ENERGY)}`,save:x=>{s.energy=+val(x,'input[type=range]');draft()}},
   {t:'b',foot:'yn',h:()=>`${tag(t('d_routine',{i:1}))}<h2 class="q">${t('r1')}${t('sep_comma')}<i>${t('r1d')}</i></h2><p class="sc muted">${t('d_time')}</p><input type="time" class="field" id="wake" value="${esc(s.wake)}">`,
    save:x=>{s.wake=val(x,'#wake');draft()},onYes:()=>s.checks[0]=true,onNo:()=>s.checks[0]=false},
@@ -190,27 +188,33 @@ function dayView(n){const D=DAYS[n-1];if(!D)return home();const {c,l}=levelOf(n)
 }
 
 // ---------- Question forms (reflection, review, synthesis) ----------
-function qflow(qs,store,key,label,title,sub){const v=Object.assign({},store[key]||{});
+// A question is a string (free text) or {q, s:[5 slider labels]} (smiley slider, stored 0..100).
+const FINALS=['synth','relire','next'];
+function qflow(qs,store,key,label,title,sub){const v=Object.assign({},store[key]||{});const back=FINALS.includes(key)?'final':'home';
  const steps=[{t:'b',h:()=>`<p class="sc">${esc(label)}</p><h1 class="big">${esc(title)}</h1><p class="lead">${esc(sub)}</p>`,cta:t('begin')}];
- qs.forEach((q,i)=>steps.push({t:i%2?'b':'w',h:()=>`<p class="sc">${t('q_of',{label:esc(label),i:i+1,n:qs.length})}</p><h2 class="q">${esc(q)}</h2><textarea class="field" id="f">${esc(v[i]||'')}</textarea>`,save:x=>v[i]=val(x,'#f')}));
- steps.at(-1).cta=t('save_ok');steps.at(-1).ok=true;steps.at(-1).final=()=>{v.date=today();store[key]=v;save();toast(t('saved'));go(key==='synth'?'final':'home')};
- stepper(steps,{onExit:()=>go(key==='synth'?'final':'home')})}
-function reflectView(k){const [cid,lid]=k.split('-');const c=CHAPTERS.find(x=>x.id===cid),l=c?.levels.find(x=>x[0]===lid);if(!l)return go('home');
- qflow(REFLECTION_Q,S.reflections,k,t('refl_label'),t('refl_title'),t('refl_sub',{a:l[2],b:l[3],level:l[1]}))}
-function bilanView(cid){const c=CHAPTERS.find(x=>x.id===cid);if(!c)return go('home');qflow(BILAN_Q,S.bilans,cid,t('bilan_label',{name:c.name}),t('bilan_title'),t('bilan_sub'))}
+ qs.forEach((q,i)=>{const sl=typeof q==='object',tx=sl?q.q:q,tg=`<p class="sc">${t('q_of',{label:esc(label),i:i+1,n:qs.length})}</p><h2 class="q">${esc(tx)}</h2>`;
+  steps.push(sl?{t:i%2?'b':'w',h:()=>tg+slider(typeof v[i]==='number'?v[i]:50,q.s),save:x=>v[i]=+val(x,'input[type=range]')}
+   :{t:i%2?'b':'w',h:()=>tg+`<textarea class="field" id="f">${esc(typeof v[i]==='string'?v[i]:'')}</textarea>`,save:x=>v[i]=val(x,'#f')})});
+ steps.at(-1).cta=t('save_ok');steps.at(-1).ok=true;steps.at(-1).final=()=>{v.date=today();store[key]=v;save();toast(t('saved'));go(back)};
+ stepper(steps,{onExit:()=>go(back)})}
+function reflectView(k){const [cid,lid]=k.split('-');const c=CHAPTERS.find(x=>x.id===cid),l=c?.levels.find(x=>x[0]===lid),P=L.pauses[k];if(!l||!P)return go('home');
+ qflow(P.qs,S.reflections,k,t('refl_label'),P.w,fill(P.sub,{a:l[2],b:l[3],level:l[1]}))}
+function bilanView(cid){const c=CHAPTERS.find(x=>x.id===cid),B=L.bilans[cid];if(!c||!B)return go('home');qflow(B.qs,S.bilans,cid,t('bilan_label',{name:c.name}),B.w,B.sub)}
 
 // ---------- The 90 days ----------
 function finalView(step){if(nextDay()<=90)return go('home');
- if(step==='synth'){S.synth=S.synth||{};return qflow(SYNTH_Q,S,'synth',t('synth_label'),t('synth_title'),t('synth_sub'))}
- if(step==='letter')return stepper([{t:'b',h:()=>`<p class="sc">${t('letter_tag')}</p><h2 class="q">${t('letter_q')}</h2><textarea class="field" id="f" style="min-height:260px">${esc(S.letter)}</textarea>`,
+ if(FINALS.includes(step)){const F=L.finals[step];return qflow(F.qs,S,step,F.label,F.w,F.sub)}
+ if(step==='letter')return stepper([{t:'b',h:()=>`<p class="sc">${t('letter_tag')}</p><h2 class="q">${t('letter_q')}</h2><p class="small">${t('letter_lead')}</p><textarea class="field" id="f" style="min-height:240px" placeholder="${t('letter_ph')}">${esc(S.letter)}</textarea>`,
   cta:t('save_ok'),ok:true,final:()=>{S.letter=val(app,'#f');save();toast(t('saved'));go('final')}}],{onExit:()=>go('final')});
  if(step==='diplome'){setTheme('w');app.innerHTML=`<div class="page"><section class="blk w"><div class="diploma"><p class="sc">${t('dip_of')}</p><h1 class="big">Consistency</h1><p class="sc" style="margin-top:28px">${t('dip_awarded')}</p>
-  <h2 class="q" style="font-size:44px"><i>${esc(S.profile.name)}</i></h2><p class="lead" style="margin:16px auto">${t('dip_for')}</p><p class="small">${t('dip_dates',{a:fmt(S.profile.start),b:fmt(new Date())})}</p></div>
+  <h2 class="q" style="font-size:44px"><i>${esc(S.profile.name)}</i></h2><p class="lead" style="margin:16px auto">${t('dip_for')}</p><p class="small">${t('dip_dates',{a:fmt(S.profile.start),b:fmt(new Date())})}</p><p class="quote" style="margin-top:22px;font-size:19px">${t('dip_quote')}</p><p class="sc muted" style="margin-top:18px">${t('dip_witness')}</p></div>
   <button class="btn" onclick="window.print()">${t('print')}</button><button class="btn ghost" style="margin-top:10px" onclick="go('final')">${t('back')}</button></section></div>`;return}
  const c4=CHAPTERS[3];
- setTheme('b');app.innerHTML=`<div class="page"><section class="blk b"><p class="sc">${t('f_tag',{obj:esc(c4.obj)})}</p><h1 class="huge">90.</h1><p class="lead">${esc(c4.desc)}</p>
-  <div style="margin-top:24px"><button class="row btn ghost" onclick="go('final','synth')">${t('f_synth')} ${S.synth?.date?'✓':'→'}</button></div>
+ setTheme('b');app.innerHTML=`<div class="page"><section class="blk b"><p class="sc">${t('f_tag',{obj:esc(c4.obj)})}</p><h1 class="huge">90.</h1><p class="lead" style="margin-top:22px">${esc(c4.desc)}</p><p class="small">${t('f_story')}</p>
+  <div style="margin-top:24px"><button class="btn ghost" onclick="go('final','synth')">${t('f_synth')} ${S.synth?.date?'✓':'→'}</button></div>
+  <button class="btn ghost" style="margin-top:10px" onclick="go('final','relire')">${t('f_relire')} ${S.relire?.date?'✓':'→'}</button>
   <button class="btn ghost" style="margin-top:10px" onclick="go('journal')">${t('f_reread')}</button>
+  <button class="btn ghost" style="margin-top:10px" onclick="go('final','next')">${t('f_next')} ${S.next?.date?'✓':'→'}</button>
   <button class="btn ghost" style="margin-top:10px" onclick="go('final','letter')">${t('f_letter')} ${S.letter?'✓':'→'}</button>
   <button class="btn" style="margin-top:10px" onclick="go('final','diplome')">${t('f_dip')}</button>
   <div class="card"><p class="sc">${t('f_why')}</p><p class="quote" style="font-size:20px">${esc(S.profile.why)||'…'}</p><p class="sc" style="margin-top:18px">${t('f_commit')}</p><p class="lead">${esc(S.profile.engagement)}</p></div></section></div>`}
