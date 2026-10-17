@@ -1,5 +1,5 @@
 'use strict';
-// Consistency v3 — one question per screen, black & white, smiley sliders.
+// Consistency v3: one question per screen, black & white, smiley sliders.
 const KEY='consistency-v1', app=document.getElementById('app');
 const MOOD_MAP={'😊':85,'🙂':68,'😐':50,'😕':25};
 let S=load();
@@ -24,7 +24,14 @@ function setLang(code){if(!I18N[code])code='en';S.lang=code;L=I18N[code];buildDa
 {const q=new URLSearchParams(location.search).get('lang');if(q&&LANGS.includes(q))S.lang=q;}
 if(!S.lang)S.lang=S.profile?'en':detectLang();
 setLang(S.lang);
-const langPicker=()=>`<div class="langs">${LANGS.map(c=>`<button data-lang="${c}" class="${c===S.lang?'on':''}">${I18N[c].name}</button>`).join('')}</div>`;
+const star=(cx,cy,r,rot=0)=>{let p='';for(let i=0;i<10;i++){const a=Math.PI/5*i-Math.PI/2+rot,rr=i%2?r*.4:r;p+=(i?'L':'M')+(cx+rr*Math.cos(a)).toFixed(2)+' '+(cy+rr*Math.sin(a)).toFixed(2)}return `<path d="${p}Z" fill="#FFDE00"/>`};
+const FLAGS={
+ en:'<rect width="40" height="40" fill="#fff"/><rect y="0.00" width="40" height="5.81" fill="#B22234"/><rect y="11.43" width="40" height="5.81" fill="#B22234"/><rect y="22.86" width="40" height="5.81" fill="#B22234"/><rect y="34.29" width="40" height="5.81" fill="#B22234"/><rect width="21" height="22.86" fill="#3C3B6E"/><circle cx="6" cy="6" r="1.1" fill="#fff"/><circle cx="12" cy="6" r="1.1" fill="#fff"/><circle cx="18" cy="6" r="1.1" fill="#fff"/><circle cx="6" cy="12" r="1.1" fill="#fff"/><circle cx="12" cy="12" r="1.1" fill="#fff"/><circle cx="18" cy="12" r="1.1" fill="#fff"/><circle cx="6" cy="18" r="1.1" fill="#fff"/><circle cx="12" cy="18" r="1.1" fill="#fff"/><circle cx="18" cy="18" r="1.1" fill="#fff"/>',
+ fr:'<rect width="14" height="40" fill="#0055A4"/><rect x="13" width="14" height="40" fill="#fff"/><rect x="26" width="14" height="40" fill="#EF4135"/>',
+ es:'<rect width="40" height="40" fill="#AA151B"/><rect y="10" width="40" height="20" fill="#F1BF00"/>',
+ zh:'<rect width="40" height="40" fill="#EE1C25"/>'+star(12,14,6)+star(21,7,2,.6)+star(25,11,2,.9)+star(25,17,2,0)+star(21,21,2,.4),
+ pt:'<rect width="40" height="40" fill="#FF0000"/><rect width="17" height="40" fill="#006600"/><circle cx="17" cy="20" r="7" fill="#FFDE00" stroke="#003399" stroke-width="1.5"/><path d="M14 16h6v5a3 3 0 0 1-6 0z" fill="#fff" stroke="#FF0000" stroke-width="1.2"/>'};
+const langPicker=()=>`<div class="langs" role="group" aria-label="${t('language')}">${["fr","en","es","pt","zh"].map(c=>`<button data-lang="${c}" class="flag ${c===S.lang?'on':''}" aria-label="${I18N[c].name}" title="${I18N[c].name}" aria-pressed="${c===S.lang}"><svg viewBox="0 0 40 40" aria-hidden="true">${FLAGS[c]}</svg></button>`).join('')}</div>`;
 document.addEventListener('click',e=>{const b=e.target.closest('[data-lang]');if(!b)return;e.stopPropagation();setLang(b.dataset.lang);save();render()},true);
 // Shrink huge words that would overflow narrow screens (long FR/PT words, etc.)
 function fitText(){app.querySelectorAll('.huge,.big,.q').forEach(el=>{el.style.fontSize='';let fs=parseFloat(getComputedStyle(el).fontSize),g=0;
@@ -55,7 +62,7 @@ const mouth=v=>`M60 135 Q100 ${(135+(v-50)*0.9).toFixed(1)} 140 135`;
 const labOf=(v,L)=>L[Math.min(4,Math.floor(v/20))];
 const faceSvg=(v,cls='')=>`<svg class="${cls}" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" class="fc"/><circle cx="68" cy="80" r="11" class="ft"/><circle cx="132" cy="80" r="11" class="ft"/><path class="fm" d="${mouth(v)}"/></svg>`;
 function slider(v,L){v=v==null?50:v;return `<div class="slider"><div class="face">${faceSvg(v)}<div class="lab">${labOf(v,L)}</div></div>
- <input type="range" min="0" max="100" value="${v}" aria-label="${L[0]} – ${L[4]}" data-l="${L.join('|')}"><div class="ends sc"><span>${L[0]}</span><span>${L[4]}</span></div></div>`}
+ <input type="range" min="0" max="100" value="${v}" aria-label="${L[0]} / ${L[4]}" data-l="${L.join('|')}"><div class="ends sc"><span>${L[0]}</span><span>${L[4]}</span></div></div>`}
 function wireSliders(root){root.querySelectorAll('.slider input').forEach(r=>{const w=r.closest('.slider'),p=w.querySelector('.fm'),lb=w.querySelector('.lab'),L=r.dataset.l.split('|');
  r.addEventListener('input',()=>{p.setAttribute('d',mouth(+r.value));lb.textContent=labOf(+r.value,L)})})}
 
@@ -168,10 +175,10 @@ function dayView(n){const D=DAYS[n-1];if(!D)return home();const {c,l}=levelOf(n)
  stepper([
   {t:'w',h:()=>`${tag(esc(c.name)+' · '+l[1])}${ph}<h1 class="huge">${t('d_huge',{n})}</h1><p class="lead">${esc(D.intro)}</p>`,cta:t('begin')},
   {t:'w',h:()=>`${tag(t('d_morning'))}<h2 class="q">${t('d_energy_q')}</h2>${slider(s.energy,ENERGY)}`,save:x=>{s.energy=+val(x,'input[type=range]');draft()}},
-  {t:'b',foot:'yn',h:()=>`${tag(t('d_routine',{i:1}))}<h2 class="q">${t('r1')} — <i>${t('r1d')}</i></h2><p class="sc muted">${t('d_time')}</p><input type="time" class="field" id="wake" value="${esc(s.wake)}">`,
+  {t:'b',foot:'yn',h:()=>`${tag(t('d_routine',{i:1}))}<h2 class="q">${t('r1')}${t('sep_comma')}<i>${t('r1d')}</i></h2><p class="sc muted">${t('d_time')}</p><input type="time" class="field" id="wake" value="${esc(s.wake)}">`,
    save:x=>{s.wake=val(x,'#wake');draft()},onYes:()=>s.checks[0]=true,onNo:()=>s.checks[0]=false},
   {t:'w',foot:'yn',h:()=>`${tag(t('d_routine',{i:2}))}<h2 class="q">${t('d_water_q')}</h2>`,onYes:()=>s.checks[1]=true,onNo:()=>s.checks[1]=false},
-  {t:'b',foot:'yn',h:()=>`${tag(t('d_routine',{i:3}))}<h1 class="big">${esc(word)}${L.cjk?'':'.'}</h1><h2 class="q" style="font-size:26px">${esc(D.task[0])} — <i>${esc(D.task[1])}</i></h2>${D.ideas?`<p class="small">${esc(D.ideas)}</p>`:''}`,onYes:()=>s.checks[2]=true,onNo:()=>s.checks[2]=false},
+  {t:'b',foot:'yn',h:()=>`${tag(t('d_routine',{i:3}))}<h1 class="big">${esc(word)}${L.cjk?'':'.'}</h1><h2 class="q" style="font-size:26px">${esc(D.task[0])}${t('sep_colon')}<i>${esc(D.task[1])}</i></h2>${D.ideas?`<p class="small">${esc(D.ideas)}</p>`:''}`,onYes:()=>s.checks[2]=true,onNo:()=>s.checks[2]=false},
   {t:'w',h:()=>`${tag(t('d_write'))}<h2 class="q">${esc(D.fill)}</h2><input class="field" id="f" value="${esc(s.fill)}" placeholder="${t('d_write_ph')}">`,save:x=>{s.fill=val(x,'#f');draft()}},
   {t:'b',h:()=>`${tag(t('d_tonight'))}<h2 class="q">${t('d_line_q')}</h2><input class="field" id="f" value="${esc(s.line)}" placeholder="${t('d_line_ph')}">`,save:x=>{s.line=val(x,'#f');draft()}},
   {t:'b',h:()=>`${tag(t('d_tonight'))}<h2 class="q">${t('d_feel_q')}</h2>${slider(s.mood,FEEL)}`,save:x=>{s.mood=+val(x,'input[type=range]');draft()}},
@@ -206,7 +213,7 @@ function finalView(step){if(nextDay()<=90)return go('home');
   <button class="btn ghost" style="margin-top:10px" onclick="go('journal')">${t('f_reread')}</button>
   <button class="btn ghost" style="margin-top:10px" onclick="go('final','letter')">${t('f_letter')} ${S.letter?'✓':'→'}</button>
   <button class="btn" style="margin-top:10px" onclick="go('final','diplome')">${t('f_dip')}</button>
-  <div class="card"><p class="sc">${t('f_why')}</p><p class="quote" style="font-size:20px">${esc(S.profile.why)||'—'}</p><p class="sc" style="margin-top:18px">${t('f_commit')}</p><p class="lead">${esc(S.profile.engagement)}</p></div></section></div>`}
+  <div class="card"><p class="sc">${t('f_why')}</p><p class="quote" style="font-size:20px">${esc(S.profile.why)||'…'}</p><p class="sc" style="margin-top:18px">${t('f_commit')}</p><p class="lead">${esc(S.profile.engagement)}</p></div></section></div>`}
 
 // ---------- Journal ----------
 function journalView(){setTheme('w');const ds=Object.entries(S.days).filter(([k,d])=>d?.done).sort((a,b)=>a[0]-b[0]);
@@ -217,7 +224,7 @@ function journalView(){setTheme('w');const ds=Object.entries(S.days).filter(([k,
  for(let d=1;d<=len;d++){const iso=new Date(Date.UTC(y,m,d)).toISOString().slice(0,10);cal+=`<div class="${filled.has(iso)?'on':jk.has(iso)?'jk':''} ${iso===today()?'td':''}">${d}</div>`}
  app.innerHTML=`<div class="page"><section class="blk w"><p class="sc">${t('j_tag')}</p><h1 class="big">${t('j_title')}</h1><p class="sc" style="margin-top:26px">${now.toLocaleDateString(L.locale,{month:'long',year:'numeric'})}</p><div class="cal">${cal}</div>
  <p class="small" style="margin-top:12px"><span style="color:var(--ok)">●</span> ${t('j_done')} &nbsp; <span style="color:var(--no)">●</span> ${t('j_joker')}</p></section>
- <section class="blk b">${ds.length?ds.map(([n,d])=>`<button class="entry" onclick="go('day',${n})"><span class="sc muted">${t('day_n',{n})} · ${fmt(d.date)}</span><br><span class="serif">${esc(d.line||d.fill||'—')}</span>
+ <section class="blk b">${ds.length?ds.map(([n,d])=>`<button class="entry" onclick="go('day',${n})"><span class="sc muted">${t('day_n',{n})} · ${fmt(d.date)}</span><br><span class="serif">${esc(d.line||d.fill||'…')}</span>
   ${typeof d.mood==='number'?`<span style="float:right">${faceSvg(d.mood,'mini')}</span>`:''}</button>`).join(''):`<h2 class="q">${t('j_empty')}</h2>`}</section></div>`;window.scrollTo(0,0)}
 
 // ---------- Settings ----------

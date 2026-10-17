@@ -76,3 +76,20 @@ header nav{gap:22px;padding:8px 0 10px;border-top:1px solid var(--line)}
 .langs button.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
 .cjk .q{line-height:1.4}
 .cjk header .brand{letter-spacing:-.01em}
+/* circle flag language picker */
+.langs{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:14px;margin:12px 0 8px;padding:0}
+.langs button.flag{width:42px;height:42px;padding:0;border-radius:50%;overflow:hidden;border:0;background:#ccc;filter:grayscale(1) contrast(1.05);opacity:.8;transition:filter .3s,opacity .3s,box-shadow .3s,transform .15s;box-shadow:0 0 0 1px var(--line);-webkit-touch-callout:none}
+.langs button.flag svg{width:100%;height:100%;display:block}
+.langs button.flag:hover,.langs button.flag:focus-visible,.langs button.flag:active,.langs button.flag.on{filter:none;opacity:1}
+.langs button.flag:active{transform:scale(.92)}
+.langs button.flag.on{box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--fg)}
+.langs button.flag:focus-visible{outline:none;box-shadow:0 0 0 2px var(--bg),0 0 0 4px var(--mut)}
+/* smaller flags: 26px visual, 40px invisible hit area */
+.langs{gap:10px;margin:14px 0 10px}
+.langs button.flag{width:26px;height:26px;position:relative;overflow:visible;background:transparent;box-shadow:none}
+.langs button.flag svg{border-radius:50%;box-shadow:0 0 0 1px var(--line)}
+.langs button.flag::after{content:'';position:absolute;inset:-7px;border-radius:50%}
+.langs button.flag.on,.langs button.flag:focus-visible{box-shadow:none}
+.langs button.flag.on svg{box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--fg)}
+.langs button.flag:focus-visible svg{box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--mut)}
+.langs{justify-content:flex-end}
