@@ -49,7 +49,7 @@ const nextDay=()=>{for(let n=1;n<=90;n++)if(!S.days[n]?.done)return n;return 91}
 const range=(a,b)=>Array.from({length:b-a+1},(_,i)=>a+i);
 const pendingPause=()=>{for(const c of CHAPTERS)for(const l of c.levels){const k=c.id+'-'+l[0];if(range(l[2],l[3]).every(n=>S.days[n]?.done)&&!S.reflections[k])return {type:'reflect',c,l,k};}
  for(const c of CHAPTERS.slice(0,3)){const last=c.levels.at(-1)[3];if(S.days[last]?.done&&!S.bilans[c.id])return {type:'bilan',c};}return null};
-const today=()=>new Date().toISOString().slice(0,10);
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}; // local calendar date
 const fmt=d=>new Date(typeof d==='string'&&d.length===10?d+'T12:00':d).toLocaleDateString(L.locale,{month:'short',day:'numeric',year:'numeric'});
 function go(v,arg){location.hash=v+(arg!=null?'/'+arg:'')}
 window.go=go;
@@ -94,8 +94,9 @@ const val=(sec,sel)=>sec.querySelector(sel)?.value??'';
 function render(){document.body.classList.remove('stepping');
  const top=document.getElementById('top');
  const hv=location.hash.slice(1).split('/')[0];
- if(hv==='intro'||(!S.profile&&!S.introSeen)){top.style.display='none';return introView()}
- if(!S.profile){top.style.display='none';return onboarding()}
+ if(hv==='intro'){top.style.display='none';return introView()}
+ if(hv==='signup'&&!S.profile){top.style.display='none';return onboarding()}
+ if(hv==='bot'||!S.profile){top.style.display='none';return botView()}
  top.style.display='';const [v,a]=location.hash.slice(1).split('/');
  top.querySelectorAll('[data-go]').forEach(b=>b.classList.toggle('on',b.dataset.go===(v||'home')||(!v&&b.dataset.go==='home')));
  ({day:()=>dayView(+a),reflect:()=>reflectView(a),bilan:()=>bilanView(a),final:()=>finalView(a),journal:journalView,settings:settingsView}[v]||home)();
@@ -109,7 +110,7 @@ const reveal=s=>(L.cjk?[s]:s.split(' ')).map((w,i)=>`<span class="rv" style="ani
 const noMotion=()=>matchMedia('(prefers-reduced-motion: reduce)').matches;
 let introTimer=null;
 function introView(){clearInterval(introTimer);
- const done=()=>{clearInterval(introTimer);S.introSeen=true;save();if(S.profile)go('settings');else{location.hash='';render()}};
+ const done=()=>{clearInterval(introTimer);S.introSeen=true;save();if(S.profile)go('settings');else go('signup')};
  const path=[['7',t('days'),'#3a6fd8',7],['14',t('days'),'#2f9e6a',14],['1',t('month'),'#e07b2a',27],['90',t('days'),'#7d4fc4',0]];
  const sp=L.cjk?'':' ';
  stepper([
@@ -148,17 +149,27 @@ function missedCard(){const last=[...Object.values(S.days).filter(d=>d?.done).ma
  const gap=Math.round((new Date(today())-new Date(last))/864e5);
  return gap>=2&&nextDay()<=90?`<div class="card"><p class="sc">${t('miss_tag')}</p><h2 class="q" style="font-size:30px">${t('miss_q')}</h2><p class="lead">${t('miss_lead',{gap,done:doneCount(),next:nextDay()})}</p>
  ${S.jokers>0?`<button class="btn ghost" id="joker">${t('joker_btn',{n:S.jokers})}</button>`:''}</div>`:''}
+const MILESTONES=[7,14,30,90];
+// Current milestone: the chosen target until it is reached (then a "next" offer); legacy profiles follow their progress.
+function goalOf(dc){const tg=S.profile.target;
+ if(MILESTONES.includes(tg)){const next=MILESTONES.find(m=>m>tg)||90;return {n:tg,reached:dc>=tg&&tg<90,next}}
+ const n=MILESTONES.find(m=>m>dc)||90;return {n,reached:false,next:MILESTONES.find(m=>m>n)||90}}
 function home(){setTheme('w');const nd=nextDay(),dc=doneCount(),p=pendingPause(),jk=new Set(S.usedJokers.map(j=>j.beforeDay));
  const cta=p?`<button class="btn" onclick="go('${p.type}','${p.type==='reflect'?p.k:p.c.id}')">${p.type==='reflect'?t('cta_reflect',{level:p.l[1]}):t('cta_bilan',{name:p.c.name})}</button>`
   :nd<=90?`<button class="btn" onclick="go('day',${nd})">${t('cta_day',{n:nd})}</button>`:`<button class="btn" onclick="go('final')">${t('cta_final')}</button>`;
- let h=`<div class="page"><section class="blk w"><p class="sc">${t('hello',{name:esc(S.profile.name)})}</p><h1 class="huge">${dc}<span class="serif" style="font-size:.32em;font-weight:400;letter-spacing:0"> / 90</span></h1>
-  <p class="small">${t('days_done')}</p><div class="bar"><i style="width:${dc/90*100}%"></i></div>${cta}${missedCard()}</section>`;
+ const G=goalOf(dc),reached=G.reached;
+ let h=`<div class="page"><section class="blk w"><p class="sc">${t('hello',{name:esc(S.profile.name)})}</p><h1 class="huge">${Math.min(dc,G.n)}<span class="serif" style="font-size:.32em;font-weight:400;letter-spacing:0"> / ${G.n}</span></h1>
+  <p class="small">${G.n<90?t('goal_small',{n:G.n}):t('days_done')}</p><div class="bar"><i style="width:${Math.min(1,dc/G.n)*100}%"></i></div>
+  ${G.n<90?`<p class="sc muted goal-total">${t('goal_total',{d:dc})}</p>`:''}
+  ${reached?`<div class="goal-done"><p class="sc">${t('goal_done_tag')}</p><h2 class="q">${t('goal_done_word',{n:G.n})}</h2><p class="lead">${t('goal_done_lead')}</p><button class="btn ghost" id="gnext">${t('goal_next',{n:G.next})}</button></div>`:''}
+  ${cta}${missedCard()}</section>`;
  CHAPTERS.forEach((c,i)=>{const th=i%2?'w':'b';h+=`<section class="blk ${th}"><p class="sc">${t('chapter_n',{n:i+1,obj:esc(c.obj)})}</p><h2 class="big">${esc(c.short)}</h2><p class="small">${esc(c.desc)}</p>`;
   c.levels.forEach(l=>{h+=`<div class="lvl sc"><span>${l[1]}</span><span>${l[2]}-${l[3]}${S.reflections[c.id+'-'+l[0]]?t('pause_done'):''}</span></div><div class="grid">`+range(l[2],l[3]).map(n=>{const d=S.days[n],done=d?.done,open=done||(n===nd&&!p);
    return `<button class="d ${done?'done':''} ${!done&&jk.has(n)&&n!==nd?'jk':''} ${open?'':'lock'} ${n===nd&&!p?'cur':''}" ${open?`onclick="go('day',${n})"`:'disabled'} aria-label="${t('day_n',{n})}">${n}</button>`}).join('')+'</div>'});
   if(c.id==='violet')h+=`<p class="lead" style="margin-top:20px">${t('violet_list')}</p>${nd>90&&!p?`<button class="btn" style="margin-top:16px" onclick="go('final')">${t('open')}</button>`:`<p class="sc muted" style="margin-top:14px">${t('unlocks')}</p>`}`;
   h+='</section>'});
  app.innerHTML=h+'</div>';window.scrollTo(0,0);
+ const gn=document.getElementById('gnext');if(gn)gn.onclick=()=>{S.profile.target=G.next;save();render()};
  const j=document.getElementById('joker');if(j)j.onclick=()=>{S.jokers--;S.lastVisit=today();S.usedJokers.push({date:today(),beforeDay:nextDay()});save();toast(t('joker_used'));render()};
 }
 
@@ -333,7 +344,7 @@ function settingsView(){setTheme('b');const st=S.settings;
  <label class="toggle"><span>${t('s_notif')}<br><span class="small">${t('s_notif_d')}</span></span><input type="checkbox" id="nt" ${st.notif?'checked':''} style="width:24px;height:24px;accent-color:#1fa463"></label>
  <button class="btn" id="sv" style="margin-top:20px">${t('s_save')}</button></section>
  <section class="blk w"><p class="sc">${t('s_jokers')}</p><h2 class="big">${S.jokers}</h2><p class="lead">${t('s_jokers_d')}</p></section>
- <section class="blk w"><p class="sc">${t('s_about')}</p><button class="btn ghost" onclick="go('intro')">${t('s_what')}</button></section>
+ <section class="blk w"><p class="sc">${t('s_about')}</p><button class="btn ghost" onclick="go('intro')">${t('s_what')}</button><button class="btn ghost" style="margin-top:10px" onclick="botReset();go('bot')">${t('bot_replay')}</button></section>
  <section class="blk b"><p class="sc">${t('s_restart')}</p><p class="lead">${t('s_restart_d')}</p><button class="btn no" id="rs" style="margin-top:16px">${t('s_restart_btn')}</button></section></div>`;window.scrollTo(0,0);
  document.getElementById('sv').onclick=async()=>{st.morning=val(app,'#mo');st.evening=val(app,'#ev');st.notif=document.getElementById('nt').checked;
   if(st.notif&&'Notification'in window){const p=await Notification.requestPermission();if(p!=='granted'){st.notif=false;toast(t('s_denied'))}}else if(st.notif){st.notif=false;toast(t('s_na'))}

@@ -1,5 +1,5 @@
-// v10: classic parchment diploma with red wax seal
-const C='consistency-v10',FONTS='consistency-fonts-v1',F=['./','index.html','style.css?v=10','app.js?v=10','data/plan.js?v=10','i18n/en.js?v=10','i18n/fr.js?v=10','i18n/es.js?v=10','i18n/zh.js?v=10','i18n/pt.js?v=10','manifest.json','icons/icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png','icons/apple-touch-icon.png','favicon.ico'];
+// v11: conversational onboarding companion (bot.js)
+const C='consistency-v11',FONTS='consistency-fonts-v1',F=['./','index.html','style.css?v=11','app.js?v=11','bot.js?v=11','data/plan.js?v=11','i18n/en.js?v=11','i18n/fr.js?v=11','i18n/es.js?v=11','i18n/zh.js?v=11','i18n/pt.js?v=11','manifest.json','icons/icon.svg','icons/icon-192.png','icons/icon-512.png','icons/icon-maskable-192.png','icons/icon-maskable-512.png','icons/apple-touch-icon.png','favicon.ico'];
 self.addEventListener('install',e=>{self.skipWaiting();e.waitUntil(caches.open(C).then(c=>c.addAll(F)))});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==C&&x!==FONTS).map(x=>caches.delete(x)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);
