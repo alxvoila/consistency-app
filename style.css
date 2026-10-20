@@ -92,3 +92,40 @@ header nav{gap:22px;padding:8px 0 10px;border-top:1px solid var(--line)}
 .langs button.flag.on svg{box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--fg)}
 .langs button.flag:focus-visible svg{box-shadow:0 0 0 2px var(--bg),0 0 0 3.5px var(--mut)}
 .langs{justify-content:flex-end}
+/* Diploma: classic grande école parchment, A4 proportions, scales with its width (cqw) */
+.dip-page .blk{padding:30px 16px 40px}
+.dip-sheet{position:relative;container-type:inline-size;width:100%;max-width:560px;margin:0 auto;aspect-ratio:210/297;color:#1b1710;font-family:var(--serif);text-align:center;overflow:hidden;
+ box-shadow:0 14px 34px rgba(70,45,10,.22),0 2px 6px rgba(0,0,0,.14);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.dip-frame{position:absolute;inset:0;width:100%;height:100%;display:block}
+.dip-frame .ln rect{fill:none;stroke:#7a5b22}.dip-frame .gu path{fill:none;stroke:#8b6b2e;stroke-width:.17}
+.dip-frame .orn path{fill:none;stroke:#7a5b22;stroke-width:.38;stroke-linecap:round}.dip-frame .orn .fl,.dip-frame .fl{fill:#7a5b22;stroke:none}
+.dip-in{position:absolute;left:13%;right:13%;top:11.2%;bottom:13.4%;display:flex;flex-direction:column;align-items:center}
+.dip-in p,.dip-in h1,.dip-in h2{margin:0}
+.dip-motto{font:italic 400 2.6cqw var(--serif);letter-spacing:.32em;color:#8b6b2e;text-transform:uppercase}
+.dip-of{margin-top:4.2cqw!important;font:600 3cqw var(--serif);letter-spacing:.42em;text-transform:uppercase;padding-left:.42em}
+.dip-title{margin-top:1.4cqw!important;font:700 9.2cqw/1 var(--serif);letter-spacing:.07em;text-transform:uppercase;color:#14203d;padding-left:.07em}
+.dip-rule{display:block;width:44cqw;margin:2.8cqw 0 2.6cqw}
+.dip-aw{font:italic 400 4.3cqw var(--serif);color:#5a4622}
+.dip-nm{margin-top:1.6cqw!important;width:100%;font:italic 400 8.6cqw/1.18 var(--serif);white-space:nowrap;color:#14203d;padding-bottom:1.8cqw;
+ background:linear-gradient(90deg,transparent,#8b6b2e 18%,#8b6b2e 82%,transparent) bottom/100% .22cqw no-repeat}
+.dip-nm span{display:inline-block}.dip-nm.wrap{white-space:normal;text-wrap:balance}
+.dip-for{margin-top:3.4cqw!important;font:400 3.9cqw/1.4 var(--serif);max-width:62cqw;text-wrap:balance}
+.dip-span{margin-top:1.6cqw!important;font:italic 400 3.9cqw/1.4 var(--serif)}.dip-fit{white-space:nowrap;width:100%}
+.dip-men{margin-top:2.2cqw!important;font:italic 600 3cqw var(--serif);color:#8a1c22;letter-spacing:.02em;text-wrap:balance}
+.dip-iss sup{font-size:.7em;margin-left:.1em}.dip-note{align-self:flex-end;margin:1cqw 5.5cqw 0 0!important;font:italic 400 2.1cqw var(--serif);color:#6b5630}
+.dip-iss{margin-top:1.8cqw!important;font:italic 400 2.7cqw var(--serif);color:#5a4622}
+.dip-sigs{margin-top:auto;width:100%;display:flex;justify-content:space-between;align-items:flex-start}
+.dip-sig{width:25cqw;display:flex;flex-direction:column;align-items:center}
+.dip-sign{display:block;width:21cqw;height:5.6cqw}
+.dip-line{display:block;width:100%;border-top:.2cqw solid #3b3122}
+.dip-sig p{margin-top:1.2cqw!important;font:400 2.5cqw/1.25 var(--serif);font-variant:small-caps;letter-spacing:.06em;color:#3b3122;text-wrap:balance}
+.dip-seal{position:absolute;left:50%;bottom:5.4%;width:40cqw;transform:translateX(-50%);display:block}
+.cjk .dip-motto,.cjk .dip-of,.cjk .dip-aw,.cjk .dip-for,.cjk .dip-span,.cjk .dip-iss,.cjk .dip-men,.cjk .dip-note,.cjk .dip-sig p{font-family:'Noto Serif SC',var(--serif);font-style:normal}
+.cjk .dip-of{letter-spacing:.6em}.cjk .dip-nm{font-family:var(--serif),'Noto Serif SC'}
+.dip-actions{margin-top:26px}
+@media print{@page{size:A4 portrait;margin:0}
+ html,body{background:#fff!important;margin:0!important;padding:0!important}
+ header,.dip-actions,.toast{display:none!important}
+ .dip-page,.dip-page .blk{padding:0!important;margin:0!important;min-height:0!important;background:#fff!important}
+ .dip-page .blk>*{max-width:none!important}
+ .dip-sheet{width:210mm!important;height:297mm!important;max-width:none!important;aspect-ratio:auto;margin:0!important;box-shadow:none!important;break-inside:avoid;page-break-inside:avoid}}

@@ -201,14 +201,107 @@ function reflectView(k){const [cid,lid]=k.split('-');const c=CHAPTERS.find(x=>x.
  qflow(P.qs,S.reflections,k,t('refl_label'),P.w,fill(P.sub,{a:l[2],b:l[3],level:l[1]}))}
 function bilanView(cid){const c=CHAPTERS.find(x=>x.id===cid),B=L.bilans[cid];if(!c||!B)return go('home');qflow(B.qs,S.bilans,cid,t('bilan_label',{name:c.name}),B.w,B.sub)}
 
+// ---------- Diploma: classic grande école parchment with a red wax seal ----------
+const fmtLong=d=>new Date(typeof d==='string'&&d.length===10?d+'T12:00':d).toLocaleDateString(L.locale,{day:'numeric',month:'long',year:'numeric'});
+const roman=n=>{let r='';for(const [v,s] of [[1000,'M'],[900,'CM'],[500,'D'],[400,'CD'],[100,'C'],[90,'XC'],[50,'L'],[40,'XL'],[10,'X'],[9,'IX'],[5,'V'],[4,'IV'],[1,'I']])while(n>=v){r+=s;n-=v}return r};
+function guillocheTile(){let p='';for(let j=0;j<6;j++){const ph=j*Math.PI/3;let d='';for(let i=0;i<=48;i++){const x=i*6/48,y=3.5+2.7*Math.sin(x*2*Math.PI/6+ph);d+=(i?'L':'M')+x.toFixed(2)+' '+y.toFixed(2)}p+=`<path d="${d}"/>`}
+ for(let j=0;j<3;j++){const ph=j*2*Math.PI/3;let d='';for(let i=0;i<=48;i++){const x=i*6/48,y=3.5+1.3*Math.sin(x*4*Math.PI/6+ph);d+=(i?'L':'M')+x.toFixed(2)+' '+y.toFixed(2)}p+=`<path d="${d}" opacity=".7"/>`}return p}
+function rosette(cx,cy,R){let d='';const k=11,r=R*.42;for(let i=0;i<=440;i++){const a=i/440*2*Math.PI,x=cx+(R-r)*Math.cos(a)+r*.9*Math.cos((R-r)/r*a*1.0+a*k),y=cy+(R-r)*Math.sin(a)+r*.9*Math.sin(a*k+(R-r)/r*a);d+=(i?'L':'M')+x.toFixed(2)+' '+y.toFixed(2)}return `<path d="${d}"/>`}
+function dipFrame(){
+ const scroll=`<path d="M17 2.4C20.5 2.4 22.6 3.6 22.4 5.4C22.2 6.9 20.2 7.2 19.6 6C19.2 5.1 20 4.4 20.7 4.8"/><path d="M22.4 4.8C24 3.6 25.6 3.4 27.5 3.8" opacity=".75"/><path d="M12.5 5.6C14.6 5.4 16.4 6.4 16.6 8.2" opacity=".8"/>`;
+ const corner=`<g class="orn"><path d="M2.4 2.4H17M2.4 2.4V17" stroke-width=".6"/><path d="M2.4 13.2A10.8 10.8 0 0 0 13.2 2.4" /><path d="M2.4 9A6.6 6.6 0 0 0 9 2.4" opacity=".8"/>
+  ${scroll}<g transform="matrix(0 1 1 0 0 0)">${scroll}</g>
+  <circle cx="5.3" cy="5.3" r="1.1" class="fl"/><circle cx="5.3" cy="5.3" r="2.2" fill="none" stroke="#7a5b22" stroke-width=".3"/>
+  <path d="M10.4 8.6L11.6 10.4L10.4 12.2L9.2 10.4Z" transform="rotate(-45 10.4 10.4)" class="fl"/></g>`;
+ const C=(x,y,sx,sy)=>`<g transform="translate(${x} ${y}) scale(${sx} ${sy})">${corner}</g>`;
+ const band=(x,y,w,rot)=>`<g transform="translate(${x} ${y})${rot?' rotate(90)':''}"><rect width="${w}" height="7" fill="url(#dGu)"/></g>`;
+ const rose=(x,y)=>`<g transform="translate(${x} ${y})"><rect x="-3.5" y="-3.5" width="7" height="7" fill="#f6eed6"/><g class="gu">${rosette(0,0,3.1)}</g><circle r=".7" class="fl"/></g>`;
+ return `<svg class="dip-frame" viewBox="0 0 210 297" preserveAspectRatio="none" aria-hidden="true">
+ <defs>
+  <radialGradient id="dPaper" cx=".5" cy=".42" r=".75"><stop offset="0" stop-color="#fdf9ec"/><stop offset=".65" stop-color="#f6edd3"/><stop offset="1" stop-color="#e9d8ae"/></radialGradient>
+  <filter id="dGrain" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency=".9 .6" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .34  0 0 0 0 .16  0 0 0 -1.1 .95"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+  <filter id="dBlot" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency=".012" numOctaves="2" seed="9"/><feColorMatrix values="0 0 0 0 .55  0 0 0 0 .4  0 0 0 0 .18  0 0 0 -2.4 1.25"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+  <pattern id="dGu" width="6" height="7" patternUnits="userSpaceOnUse"><g class="gu">${guillocheTile()}</g></pattern>
+ </defs>
+ <rect width="210" height="297" fill="url(#dPaper)"/>
+ <rect width="210" height="297" filter="url(#dBlot)" opacity=".35"/>
+ <rect width="210" height="297" filter="url(#dGrain)" opacity=".22"/>
+ <g class="ln"><rect x="6" y="6" width="198" height="285" stroke-width="1.1"/><rect x="8" y="8" width="194" height="281" stroke-width=".3"/>
+ <rect x="10" y="10" width="190" height="277" stroke-width=".35"/><rect x="17" y="17" width="176" height="263" stroke-width=".35"/></g>
+ ${band(10,10,190)}${band(10,280,190)}${band(17,10,277,1)}${band(200,10,277,1)}
+ ${rose(13.5,13.5)}${rose(196.5,13.5)}${rose(13.5,283.5)}${rose(196.5,283.5)}
+ <g class="ln"><rect x="20" y="20" width="170" height="257" stroke-width=".6"/><rect x="21.6" y="21.6" width="166.8" height="253.8" stroke-width=".2"/></g>
+ ${C(21.6,21.6,1,1)}${C(188.4,21.6,-1,1)}${C(21.6,275.4,1,-1)}${C(188.4,275.4,-1,-1)}
+ </svg>`}
+function waxSeal(year){
+ let d='';const N=90;for(let i=0;i<=N;i++){const a=i/N*2*Math.PI,r=30+1.5*Math.sin(5*a+1)+1.1*Math.sin(9*a+2.3)+.8*Math.sin(14*a+.4)+.5*Math.sin(23*a+1.7);d+=(i?'L':'M')+(60+r*Math.cos(a)).toFixed(2)+' '+(52+r*Math.sin(a)).toFixed(2)}d+='Z';
+ const ring=`CONSISTENCY ✦ ${roman(year)} ✦ `;
+ return `<svg class="dip-seal" viewBox="0 0 120 122" role="img" aria-label="Consistency">
+ <defs>
+  <linearGradient id="sRib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4f070c"/><stop offset=".35" stop-color="#9c1820"/><stop offset=".55" stop-color="#c22a31"/><stop offset="1" stop-color="#5a080e"/></linearGradient>
+  <radialGradient id="sH" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#8c8c8c"/><stop offset=".64" stop-color="#8c8c8c"/><stop offset=".77" stop-color="#c8c8c8"/><stop offset=".88" stop-color="#ababab"/><stop offset=".96" stop-color="#707070"/><stop offset="1" stop-color="#4a4a4a"/></radialGradient>
+  <filter id="sWax" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+   <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  1 0 0 0 0" result="h"/>
+   <feTurbulence type="fractalNoise" baseFrequency=".18" numOctaves="2" seed="3" result="tn"/><feColorMatrix in="tn" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  .09 0 0 0 0" result="tna"/><feComposite in="h" in2="tna" operator="arithmetic" k2="1" k3="1" k4="-.04" result="h2"/><feGaussianBlur in="h2" stdDeviation=".6" result="hb"/>
+   <feDiffuseLighting in="hb" surfaceScale="4.5" diffuseConstant="1.05" lighting-color="#fff" result="dif"><feDistantLight azimuth="225" elevation="48"/></feDiffuseLighting>
+   <feSpecularLighting in="hb" surfaceScale="4.5" specularConstant=".6" specularExponent="30" lighting-color="#ffd8cc" result="spec"><feDistantLight azimuth="225" elevation="40"/></feSpecularLighting>
+   <feFlood flood-color="#b3151d"/><feComposite in2="dif" operator="arithmetic" k1="1.18" k4="-.02" result="lit"/>
+   <feComposite in="lit" in2="spec" operator="arithmetic" k2="1" k3=".55" result="all"/>
+   <feComposite in="all" in2="SourceAlpha" operator="in" result="wax"/>
+   <feGaussianBlur in="SourceAlpha" stdDeviation="1.6" result="sh"/><feOffset in="sh" dx="1.2" dy="1.8" result="sho"/>
+   <feColorMatrix in="sho" values="0 0 0 0 .25  0 0 0 0 .08  0 0 0 0 .03  0 0 0 .42 0" result="shc"/>
+   <feMerge><feMergeNode in="shc"/><feMergeNode in="wax"/></feMerge>
+  </filter>
+  <filter id="sRibF" x="-20%" y="-10%" width="140%" height="130%"><feDropShadow dx=".8" dy="1.2" stdDeviation="1" flood-color="#3a1a05" flood-opacity=".35"/></filter>
+  <path id="sRing" d="M60 52m-16.6 0a16.6 16.6 0 1 1 33.2 0a16.6 16.6 0 1 1 -33.2 0"/>
+ </defs>
+ <g filter="url(#sRibF)">
+  <path d="M53 58L66 62L47 118L42.5 110L34 115.5Z" fill="url(#sRib)"/><path d="M53 58L59.5 60L43 113L42.5 110Z" fill="#fff" opacity=".12"/>
+  <path d="M67 58L54 62L73 118L77.5 110L86 115.5Z" fill="url(#sRib)"/><path d="M67 58L72 59.5L85 114L77.5 110Z" fill="#000" opacity=".15"/>
+ </g>
+ <g filter="url(#sWax)">
+  <path d="${d}" fill="url(#sH)"/>
+  <circle cx="60" cy="52" r="22.4" fill="#555"/>
+  <circle cx="60" cy="52" r="22.4" fill="none" stroke="#9a9a9a" stroke-width=".7"/>
+  <circle cx="60" cy="52" r="14.6" fill="none" stroke="#a0a0a0" stroke-width=".55"/>
+  <text font-family="'Playfair Display',Georgia,serif" font-weight="700" font-size="5.4" fill="#ababab" letter-spacing=".6"><textPath href="#sRing" textLength="102" lengthAdjust="spacing">${ring}</textPath></text>
+  <circle cx="60" cy="52" r="8.4" fill="none" stroke="#b0b0b0" stroke-width="2"/>
+  <circle cx="56.9" cy="49.6" r="1.25" fill="#b0b0b0"/><circle cx="63.1" cy="49.6" r="1.25" fill="#b0b0b0"/>
+  <path d="M55.6 54.2Q60 58.6 64.4 54.2" fill="none" stroke="#b0b0b0" stroke-width="1.5" stroke-linecap="round"/>
+ </g>
+ </svg>`}
+function diplomaHtml(name,start,end){const nm=String(name||'').trim()||t('ob6_you'),a=fmtLong(start),b=fmtLong(end),yr=new Date(end+'T12:00').getFullYear()||new Date().getFullYear();
+ const rule=`<svg class="dip-rule" viewBox="0 0 120 6" aria-hidden="true"><path d="M2 3H50M70 3H118" stroke="#8b6b2e" stroke-width=".5"/><path d="M60 .6L62.4 3L60 5.4L57.6 3Z" fill="#8b6b2e"/><circle cx="53.5" cy="3" r=".9" fill="#8b6b2e"/><circle cx="66.5" cy="3" r=".9" fill="#8b6b2e"/></svg>`;
+ return `<div class="dip-sheet" id="dipSheet">${dipFrame()}
+ <div class="dip-in">
+  <p class="dip-motto">Dies post diem</p>
+  <p class="dip-of">${t('dip_of')}</p>
+  <h1 class="dip-title">Consistency</h1>
+  ${rule}
+  <p class="dip-aw">${t('dip_awarded')}</p>
+  <h2 class="dip-nm" id="dipName"><span>${esc(nm)}</span></h2>
+  <p class="dip-for">${t('dip_for2')}</p>
+  <p class="dip-span dip-fit" data-f="3.9">${t('dip_span',{a,b})}</p>
+  <p class="dip-men dip-fit" data-f="3">${t('dip_mention')}</p>
+  <p class="dip-iss">${t('dip_issued',{d:b})}<sup>*</sup></p>
+  <div class="dip-sigs"><div class="dip-sig"><svg viewBox="0 0 60 16" class="dip-sign" aria-hidden="true"><path d="M3 11C6 4 9 3 9.5 6S7 13 9 12.5 14 6 16 7.5 15 12 17.5 11.5 22 7 24 8.6 23 12.6 26 11.6C29 10.6 31 6.5 33.5 7.6S32 12.6 35.5 12C40 11 44 8 47 8.8S50 11.5 57 9.6" fill="none" stroke="#1f2a44" stroke-width=".9" stroke-linecap="round"/></svg><span class="dip-line"></span><p>${t('dip_sig1')}</p></div>
+   <div class="dip-sig"><span class="dip-sign"></span><span class="dip-line"></span><p>${t('dip_sig2')}</p></div></div>
+  <p class="dip-note">${t('dip_note')}</p>
+ </div>
+ ${waxSeal(yr)}
+ </div>`}
+function fitDipName(){document.querySelectorAll('.dip-fit').forEach(p=>{let f=parseFloat(p.dataset.f);p.style.fontSize=f+'cqw';while(p.scrollWidth>p.clientWidth+1&&f>2.6){f-=.1;p.style.fontSize=f+'cqw'}});const el=document.getElementById('dipName');if(!el)return;const s=el.firstElementChild;let f=8.6;el.style.fontSize=f+'cqw';
+ while(s.offsetWidth>el.clientWidth&&f>4.2){f-=.2;el.style.fontSize=f+'cqw'}if(s.offsetWidth>el.clientWidth)el.classList.add('wrap')}
+
 // ---------- The 90 days ----------
 function finalView(step){if(nextDay()<=90)return go('home');
  if(FINALS.includes(step)){const F=L.finals[step];return qflow(F.qs,S,step,F.label,F.w,F.sub)}
  if(step==='letter')return stepper([{t:'b',h:()=>`<p class="sc">${t('letter_tag')}</p><h2 class="q">${t('letter_q')}</h2><p class="small">${t('letter_lead')}</p><textarea class="field" id="f" style="min-height:240px" placeholder="${t('letter_ph')}">${esc(S.letter)}</textarea>`,
   cta:t('save_ok'),ok:true,final:()=>{S.letter=val(app,'#f');save();toast(t('saved'));go('final')}}],{onExit:()=>go('final')});
- if(step==='diplome'){setTheme('w');app.innerHTML=`<div class="page"><section class="blk w"><div class="diploma"><p class="sc">${t('dip_of')}</p><h1 class="big">Consistency</h1><p class="sc" style="margin-top:28px">${t('dip_awarded')}</p>
-  <h2 class="q" style="font-size:44px"><i>${esc(S.profile.name)}</i></h2><p class="lead" style="margin:16px auto">${t('dip_for')}</p><p class="small">${t('dip_dates',{a:fmt(S.profile.start),b:fmt(new Date())})}</p><p class="quote" style="margin-top:22px;font-size:19px">${t('dip_quote')}</p><p class="sc muted" style="margin-top:18px">${t('dip_witness')}</p></div>
-  <button class="btn" onclick="window.print()">${t('print')}</button><button class="btn ghost" style="margin-top:10px" onclick="go('final')">${t('back')}</button></section></div>`;return}
+ if(step==='diplome'){setTheme('w');const start=S.profile.start||S.days[1]?.date||today(),end=S.days[90]?.date||today();
+  app.innerHTML=`<div class="page dip-page"><section class="blk w">${diplomaHtml(S.profile.name,start,end)}
+  <div class="dip-actions"><button class="btn" onclick="window.print()">${t('print')}</button><button class="btn ghost" style="margin-top:10px" onclick="go('final')">${t('back')}</button></div></section></div>`;
+  fitDipName();(document.fonts?.ready||Promise.resolve()).then(fitDipName);window.scrollTo(0,0);return}
  const c4=CHAPTERS[3];
  setTheme('b');app.innerHTML=`<div class="page"><section class="blk b"><p class="sc">${t('f_tag',{obj:esc(c4.obj)})}</p><h1 class="huge">90.</h1><p class="lead" style="margin-top:22px">${esc(c4.desc)}</p><p class="small">${t('f_story')}</p>
   <div style="margin-top:24px"><button class="btn ghost" onclick="go('final','synth')">${t('f_synth')} ${S.synth?.date?'✓':'→'}</button></div>
